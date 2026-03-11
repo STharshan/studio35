@@ -37,7 +37,6 @@ export default function FungibleLove() {
     const STRENGTH = 0.36;
     const RELAXATION = 0.95;
 
-    // --- Three.js setup ---
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: false });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
@@ -45,7 +44,6 @@ export default function FungibleLove() {
     const camera = new THREE.OrthographicCamera(-0.5, 0.5, 0.5, -0.5, 0.1, 10);
     camera.position.z = 1;
 
-    // Data texture for mouse distortion
     const size = GRID;
     const data = new Float32Array(4 * size * size);
     const dataTexture = new THREE.DataTexture(
@@ -54,7 +52,6 @@ export default function FungibleLove() {
     );
     dataTexture.needsUpdate = true;
 
-    // Load background image
     const loader = new THREE.TextureLoader();
     loader.crossOrigin = "anonymous";
     const texture = loader.load(
@@ -77,7 +74,6 @@ export default function FungibleLove() {
     const mesh = new THREE.Mesh(geo, material);
     scene.add(mesh);
 
-    // Mouse state
     const mouse = { x: 0, y: 0, px: 0, py: 0, vx: 0, vy: 0 };
 
     function resize() {
@@ -86,7 +82,6 @@ export default function FungibleLove() {
       renderer.setSize(w, h);
       material.uniforms.uResolution.value.set(w, h);
 
-      // Fix aspect ratio for plane
       const imageAspect = 1366 / 768;
       const containerAspect = w / h;
       if (containerAspect > imageAspect) {
@@ -119,7 +114,6 @@ export default function FungibleLove() {
         }
       }
 
-      // Relaxation
       for (let i = 0; i < data.length; i += 4) {
         data[i] *= RELAXATION;
         data[i + 1] *= RELAXATION;
@@ -179,26 +173,32 @@ export default function FungibleLove() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black font-sans">
+    <div
+      className="relative w-full h-screen overflow-hidden"
+   
+    >
       {/* Canvas container */}
-      <div ref={containerRef} className="absolute inset-0 w-full h-full cursor-none">
+      <div
+        ref={containerRef}
+        className="absolute inset-0 md:w-full w-170 md:mx-0 -mx-35 h-full cursor-none"
+      >
         <canvas
           ref={canvasRef}
-          className="block w-full h-full"
+          className="block w-180 h-full"
         />
       </div>
 
       {/* Hero text */}
       <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
-        <div className="px-8 sm:px-14 md:px-20 pb-12 sm:pb-16 md:pb-20">
+        <div className="px-4 sm:px-8 md:px-14 lg:px-20 pb-8 sm:pb-12 md:pb-16 lg:pb-20 w-full">
           <h1
-            className="
-              text-white text-center leading-none font-black uppercase
-              text-8xl
-              tracking-tight
-            "
+            className="text-center leading-none font-black uppercase tracking-tight"
             style={{
-              textShadow: "0 4px 40px rgba(0,0,0,0.35)",
+              fontSize: "clamp(2.5rem, 12vw, 7rem)",
+              background: "linear-gradient(90deg, #E8382A 0%, #CC1E1E 45%, #A8A9AD 75%, #2A1E1A 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              textShadow: "0 4px 40px rgba(13, 11, 11, 0.8)",
             }}
           >
             Fungible
@@ -213,7 +213,7 @@ export default function FungibleLove() {
         className="absolute inset-0 z-5 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%)",
+            "radial-gradient(ellipse at center, transparent 40%, #0D0B0B 100%)",
         }}
       />
     </div>

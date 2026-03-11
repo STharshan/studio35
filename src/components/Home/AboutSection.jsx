@@ -1,35 +1,49 @@
+import { X } from "lucide-react";
 import { useState } from "react";
 
 export default function AboutSection() {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="relative bg-black text-white py-24 px-6 overflow-hidden">
-      
-      {/* Background Script Text */}
-      <h1 className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[120px] md:text-[200px] font-serif text-white/10 whitespace-nowrap pointer-events-none">
+    <section
+      className="relative py-24 px-6 overflow-hidden bg-[#0D0B0B]"
+    >
+
+      {/* Background Script Text - Updated to subtle Worn White */}
+      <h1 className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[120px] md:text-[200px] text-[#E8E0D5]/5 whitespace-nowrap pointer-events-none">
         Club Passion
       </h1>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
 
-        {/* Small Label */}
-        <p className="text-red-400 italic mb-2">No.1 Night Club</p>
+        {/* Small Label - Studio Red */}
+        <p className="italic mb-2" style={{ color: '#CC1E1E' }}>No.1 Night Club</p>
 
-        {/* Title */}
-        <h2 className="text-3xl md:text-4xl font-bold tracking-wide mb-6">
+        {/* Title - Worn White */}
+        <h2
+          className="text-3xl md:text-4xl font-bold tracking-wide mb-6"
+          style={{ color: '#E8E0D5' }}
+        >
           ABOUT THE CLUB
         </h2>
 
-        {/* Description */}
-        <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+        {/* Description - Ash Grey */}
+        <p className="text-sm md:text-base leading-relaxed mb-8" style={{ color: '#9A8F85' }}>
           Night Club 128, born of the namesake catch phrase, “1 of a kind,” has endured
           continuous waves of competition and outlasted the rise and fall of countless
           nightlife trends.
         </p>
 
-        {/* Contact Link */}
-        <button className="text-white text-sm border-b border-red-500 pb-1 hover:text-red-400 transition">
+        {/* Contact Link - Studio Red Accent */}
+        <button
+          className="text-sm pb-1 transition border-b"
+          style={{
+            color: '#E8E0D5',
+            borderColor: '#CC1E1E'
+          }}
+          onMouseOver={(e) => e.target.style.color = '#CC1E1E'}
+          onMouseOut={(e) => e.target.style.color = '#E8E0D5'}
+        >
           Contact Us
         </button>
 
@@ -44,32 +58,36 @@ export default function AboutSection() {
               className="rounded-lg w-full object-cover"
             />
 
-            {/* Play Button */}
+            {/* Play Button - Studio Red */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-16 h-16 border-2 border-red-400 rounded-full flex items-center justify-center">
-                <div className="w-0 h-0 border-l-14 border-l-red-400 border-y-10 border-y-transparent ml-1"></div>
+              <div
+                className="w-16 h-16 border-2 rounded-full flex items-center justify-center"
+                style={{ borderColor: '#CC1E1E' }}
+              >
+                <div
+                  className="w-0 h-0 border-l-14 border-y-10 border-y-transparent ml-1"
+                  style={{ borderLeftColor: '#CC1E1E' }}
+                ></div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
 
       {/* Popup Modal */}
       {open && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-          
+        <div className="fixed inset-0 bg-[#0D0B0B]/90 flex items-center justify-center z-50">
           <div className="relative w-[90%] md:w-200">
-
             {/* Close Button */}
             <button
               onClick={() => setOpen(false)}
-              className="absolute -top-10 right-0 text-white text-2xl"
+              className="absolute -top-10 right-0 transition-opacity hover:opacity-70"
+              aria-label="Close"
             >
-              ✕
+              <X size={24} color="#E8E0D5" strokeWidth={1.5} />
             </button>
 
-            <div className="aspect-video">
+            <div className="aspect-video bg-[#2A1E1A] rounded-lg">
               <iframe
                 className="w-full h-full rounded-lg"
                 src="https://www.youtube.com/embed/ysz5S6PUM-U?autoplay=1"
@@ -78,9 +96,7 @@ export default function AboutSection() {
                 allowFullScreen
               ></iframe>
             </div>
-
           </div>
-
         </div>
       )}
     </section>

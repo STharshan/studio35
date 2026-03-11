@@ -9,13 +9,13 @@ const services = [
     desc: "Get lost in the rhythm as our DJs and performers deliver high-energy sets that keep the crowd moving all night long. Each beat, light, and visual is crafted to create an electrifying and unforgettable atmosphere.",
     icon: (
       <svg viewBox="0 0 56 56" fill="none" width="52" height="52">
-        <rect width="56" height="56" rx="12" fill="#0d0b1a" />
+        <rect width="56" height="56" rx="12" fill="#0D0B0B" />
         <path d="M20 36V22l18 7-18 7z" fill="url(#i1s)" />
         <circle cx="38" cy="20" r="5" stroke="url(#i1s)" strokeWidth="1.8" />
         <path d="M33 20h-8" stroke="url(#i1s)" strokeWidth="1.8" strokeLinecap="round" />
         <defs>
           <linearGradient id="i1s" x1="14" y1="14" x2="42" y2="42" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#5050fa" /><stop offset="1" stopColor="#c385ff" />
+            <stop stopColor="#CC1E1E" /><stop offset="1" stopColor="#E8382A" />
           </linearGradient>
         </defs>
       </svg>
@@ -28,13 +28,13 @@ const services = [
     desc: "Relax in style with exclusive seating, personalized service, and premium amenities. Every detail is thoughtfully designed to make your night luxurious, comfortable, and absolutely unforgettable from start to finish.",
     icon: (
       <svg viewBox="0 0 56 56" fill="none" width="52" height="52">
-        <rect width="56" height="56" rx="12" fill="#0d0b1a" />
+        <rect width="56" height="56" rx="12" fill="#0D0B0B" />
         <rect x="12" y="16" width="32" height="22" rx="4" stroke="url(#i2s)" strokeWidth="1.8" />
         <path d="M18 26h6M18 30h10M34 26h4" stroke="url(#i2s)" strokeWidth="1.8" strokeLinecap="round" />
         <circle cx="36" cy="30" r="3" stroke="url(#i2s)" strokeWidth="1.8" />
         <defs>
           <linearGradient id="i2s" x1="12" y1="16" x2="44" y2="38" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#5050fa" /><stop offset="1" stopColor="#c385ff" />
+            <stop stopColor="#CC1E1E" /><stop offset="1" stopColor="#E8382A" />
           </linearGradient>
         </defs>
       </svg>
@@ -47,12 +47,12 @@ const services = [
     desc: "Celebrate birthdays, corporate gatherings, or special occasions in spaces perfectly tailored just for you. Our expert team handles every single detail to ensure your private event is flawless and unforgettable.",
     icon: (
       <svg viewBox="0 0 56 56" fill="none" width="52" height="52">
-        <rect width="56" height="56" rx="12" fill="#0d0b1a" />
+        <rect width="56" height="56" rx="12" fill="#0D0B0B" />
         <path d="M28 12l18 10v14l-18 8-18-8V22l18-10z" stroke="url(#i3s)" strokeWidth="1.8" strokeLinejoin="round" />
         <path d="M28 12v22M10 22l18 10 18-10" stroke="url(#i3s)" strokeWidth="1.6" />
         <defs>
           <linearGradient id="i3s" x1="10" y1="12" x2="46" y2="44" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#5050fa" /><stop offset="1" stopColor="#c385ff" />
+            <stop stopColor="#CC1E1E" /><stop offset="1" stopColor="#E8382A" />
           </linearGradient>
         </defs>
       </svg>
@@ -65,13 +65,13 @@ const services = [
     desc: "Savor expertly crafted cocktails that excite your senses and perfectly complement the vibrant 99club energy. Each drink is thoughtfully designed to enhance your night and leave a lasting, unforgettable impression.",
     icon: (
       <svg viewBox="0 0 56 56" fill="none" width="52" height="52">
-        <rect width="56" height="56" rx="12" fill="#0d0b1a" />
+        <rect width="56" height="56" rx="12" fill="#0D0B0B" />
         <path d="M22 42c0-8 3-14 6-14s6 6 6 14" stroke="url(#i4s)" strokeWidth="1.8" strokeLinecap="round" />
         <path d="M28 28V18M24 22l4-4 4 4" stroke="url(#i4s)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M14 42h28" stroke="url(#i4s)" strokeWidth="2" strokeLinecap="round" />
         <defs>
           <linearGradient id="i4s" x1="14" y1="14" x2="42" y2="42" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#5050fa" /><stop offset="1" stopColor="#c385ff" />
+            <stop stopColor="#CC1E1E" /><stop offset="1" stopColor="#E8382A" />
           </linearGradient>
         </defs>
       </svg>
@@ -88,8 +88,6 @@ function ServiceCard({ service, translateY, zIndex, opacity, isMobile }) {
         width: "100%",
         maxWidth: isMobile ? "100%" : 420,
         zIndex,
-        // Desktop: translateY is a %, so card flies far off screen
-        // Mobile:  same % but relative to the card's own height — still flies off cleanly
         transform: `translateY(${translateY}%) rotate(${service.rotation}deg)`,
         opacity,
         willChange: "transform, opacity",
@@ -97,15 +95,15 @@ function ServiceCard({ service, translateY, zIndex, opacity, isMobile }) {
     >
       <div
         style={{
-          background: "linear-gradient(45deg, #5050fa, #c385ff)",
+          background: "linear-gradient(45deg, #CC1E1E, #E8382A)",
           borderRadius: 12,
           padding: "1.5px",
-          boxShadow: "0 4px 48px rgba(113,97,239,0.18)",
+          boxShadow: "0 4px 48px rgba(204,30,30,0.15)",
         }}
       >
         <div
           style={{
-            background: "#03000a",
+            background: "#2A1E1A",
             borderRadius: "10.5px",
             padding: isMobile ? "22px 20px 26px" : "28px 28px 32px",
             display: "flex",
@@ -117,10 +115,9 @@ function ServiceCard({ service, translateY, zIndex, opacity, isMobile }) {
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             <h3
               style={{
-                fontFamily: "'Syne', sans-serif",
                 fontSize: isMobile ? 17 : 20,
                 fontWeight: 700,
-                color: "#fff",
+                color: "#E8E0D5",
                 lineHeight: 1.3,
                 margin: 0,
               }}
@@ -131,7 +128,7 @@ function ServiceCard({ service, translateY, zIndex, opacity, isMobile }) {
               style={{
                 fontSize: isMobile ? 13 : 14,
                 lineHeight: 1.75,
-                color: "#899ab2",
+                color: "#9A8F85",
                 margin: 0,
               }}
             >
@@ -154,18 +151,17 @@ function BookNowBtn() {
       onMouseLeave={() => setHov(false)}
       style={{
         display: "inline-flex", alignItems: "center", gap: 10,
-        background: "linear-gradient(70deg, #5050fa, #c385ff)",
-        color: "#fff", borderRadius: 999, padding: "14px 28px",
+        background: "linear-gradient(70deg, #CC1E1E, #E8382A)",
+        color: "#E8E0D5", borderRadius: 999, padding: "14px 28px",
         fontSize: 15, fontWeight: 600, textDecoration: "none",
-        fontFamily: "'Syne', sans-serif",
         transform: hov ? "scale(1.04)" : "scale(1)",
-        boxShadow: hov ? "0 8px 32px rgba(113,97,239,0.45)" : "none",
+        boxShadow: hov ? "0 8px 32px rgba(204,30,30,0.4)" : "none",
         transition: "transform 0.2s, box-shadow 0.2s",
       }}
     >
       Book Now
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-        <path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M5 12h14M13 6l6 6-6 6" stroke="#E8E0D5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </a>
   );
@@ -184,7 +180,6 @@ export default function ServicesSection() {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  // Single unified scroll listener for both mobile and desktop
   useEffect(() => {
     const el = outerRef.current;
     if (!el) return;
@@ -197,10 +192,9 @@ export default function ServicesSection() {
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
-  }, [isMobile]); // re-register when layout switches
+  }, [isMobile]);
 
-  // Identical card state logic for both breakpoints
-  const TOTAL_EXITS = services.length - 1; // 3 cards exit, last stays
+  const TOTAL_EXITS = services.length - 1;
   const phaseSize = 1 / TOTAL_EXITS;
 
   const getCardState = (i) => {
@@ -216,12 +210,10 @@ export default function ServicesSection() {
   };
 
   return (
-    // 300vh tall — the sticky inner panel animates as user scrolls through
     <section
       ref={outerRef}
-      style={{ background: "#03000a", position: "relative", height: "300vh" }}
+      style={{ background: "#0D0B0B", position: "relative", height: "300vh" }}
     >
-      {/* Sticky viewport — locks to screen while section scrolls behind it */}
       <div
         style={{
           position: "sticky",
@@ -237,12 +229,9 @@ export default function ServicesSection() {
             width: "100%",
             maxWidth: 1440,
             margin: "0 auto",
-            padding: isMobile
-              ? "0 20px"
-              : "0 clamp(24px, 5vw, 80px)",
+            padding: isMobile ? "0 20px" : "0 clamp(24px, 5vw, 80px)",
           }}
         >
-          {/* ── Grid: text left, card stack right (desktop) / stacked (mobile) ── */}
           <div
             style={{
               display: "grid",
@@ -251,14 +240,12 @@ export default function ServicesSection() {
               alignItems: "center",
             }}
           >
-            {/* ── Left / Top: text ── */}
             <div style={{ display: "flex", flexDirection: "column", gap: isMobile ? 16 : 24 }}>
               <h2
                 style={{
-                  fontFamily: "'Syne', sans-serif",
                   fontSize: isMobile ? "1.6rem" : "clamp(1.8rem, 3.5vw, 3rem)",
                   fontWeight: 700,
-                  color: "#fff",
+                  color: "#E8E0D5",
                   lineHeight: 1.15,
                   margin: 0,
                 }}
@@ -267,7 +254,7 @@ export default function ServicesSection() {
               </h2>
               <p
                 style={{
-                  color: "#899ab2",
+                  color: "#9A8F85",
                   fontSize: isMobile ? "0.85rem" : "clamp(0.875rem, 1.3vw, 1rem)",
                   lineHeight: 1.85,
                   maxWidth: 460,
@@ -284,12 +271,9 @@ export default function ServicesSection() {
               </div>
             </div>
 
-            {/* ── Right / Bottom: stacked cards ── */}
             <div
               style={{
                 position: "relative",
-                // Height must contain the card so absolute children are visible.
-                // On mobile cards are shorter so we use a smaller fixed height.
                 height: isMobile ? 300 : 360,
                 display: "flex",
                 justifyContent: "center",

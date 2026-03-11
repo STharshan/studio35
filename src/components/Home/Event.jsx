@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChevronRight } from "lucide-react";
 
 const events = [
   {
@@ -6,7 +6,7 @@ const events = [
     date: "AUG 25, 2023",
     title: "DJ DOMINIQUE",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=900&q=80",
+    image: "ticket.jpg",
     size: "large",
   },
   {
@@ -31,272 +31,101 @@ function TicketLink() {
   return (
     <a
       href="#"
-      className="ue-ticket-link"
-      style={{
-        display: "inline-flex",
-        alignItems: "center",
-        gap: "6px",
-        color: "#fff",
-        fontSize: "13px",
-        fontWeight: "700",
-        letterSpacing: "0.12em",
-        textDecoration: "none",
-        textTransform: "uppercase",
-        marginTop: "14px",
-        transition: "color 0.2s",
-      }}
-      onMouseEnter={(e) => (e.currentTarget.style.color = "#e0392d")}
-      onMouseLeave={(e) => (e.currentTarget.style.color = "#fff")}
+      className="group/link inline-flex items-center gap-1.5 mt-3.5 text-[13px] font-bold tracking-[0.12em] uppercase no-underline transition-colors duration-200 text-[#E8E0D5] hover:text-[#E8382A]"
     >
       GET TICKETS
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="9 18 15 12 9 6" />
-      </svg>
+      <ChevronRight size={14} strokeWidth={3} />
     </a>
   );
 }
 
 export default function UpcomingEvents() {
   return (
-    <div className="ue-scope-container">
-      <style>{`
-        /* All styles prefixed with .ue-scope-container to ensure scoping */
+    <div className="w-full bg-[#0D0B0B] text-[#E8E0D5] selection:bg-[#E8382A]">
+      <section className="flex flex-col items-center px-5 py-20">
         
-        .ue-scope-container {
-          background: #0a0a0a;
-          width: 100%;
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-
-        .ue-scope-container * { 
-          box-sizing: border-box; 
-        }
-
-        .ue-scope-container .ue-section {
-          padding: 72px 20px 80px;
-          font-family: 'Barlow', sans-serif;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        /* HEADING */
-        .ue-scope-container .ue-heading {
-          text-align: center;
-          margin-bottom: 48px;
-        }
-
-        .ue-scope-container .ue-label {
-          font-size: 12px;
-          font-weight: 700;
-          letter-spacing: 0.3em;
-          text-transform: uppercase;
-          color: #e0392d;
-          margin-bottom: 10px;
-        }
-
-        .ue-scope-container .ue-title {
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: clamp(42px, 7vw, 80px);
-          line-height: 1;
-          color: #fff;
-          letter-spacing: 0.04em;
-          margin: 0;
-        }
-
-        .ue-scope-container .ue-title span {
-          -webkit-text-stroke: 2px #fff;
-          color: transparent;
-        }
-
-        /* GRID */
-        .ue-scope-container .ue-grid {
-          width: 100%;
-          max-width: 1100px;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: auto auto;
-          gap: 12px;
-        }
-
-        .ue-scope-container .ue-card-large {
-          grid-column: 1;
-          grid-row: 1 / 3;
-          position: relative;
-          overflow: hidden;
-          border-radius: 4px;
-          cursor: pointer;
-          min-height: 480px;
-        }
-
-        .ue-scope-container .ue-card-small {
-          grid-column: 2;
-          position: relative;
-          overflow: hidden;
-          border-radius: 4px;
-          cursor: pointer;
-          min-height: 220px;
-        }
-
-        .ue-scope-container .ue-card-small:first-of-type { grid-row: 1; }
-        .ue-scope-container .ue-card-small:last-of-type  { grid-row: 2; }
-
-        .ue-scope-container .ue-card img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-          transition: transform 0.55s ease;
-        }
-
-        .ue-scope-container .ue-card:hover img {
-          transform: scale(1.06);
-        }
-
-        .ue-scope-container .ue-overlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(
-            to top,
-            rgba(0,0,0,0.88) 0%,
-            rgba(0,0,0,0.25) 55%,
-            transparent 100%
-          );
-          z-index: 1;
-        }
-
-        .ue-scope-container .ue-card-body {
-          position: absolute;
-          bottom: 0; left: 0; right: 0;
-          z-index: 2;
-          padding: clamp(16px, 3vw, 28px);
-        }
-
-        .ue-scope-container .ue-card-date {
-          font-size: 12px;
-          font-weight: 600;
-          letter-spacing: 0.1em;
-          color: rgba(255,255,255,0.65);
-          text-transform: uppercase;
-          margin-bottom: 6px;
-        }
-
-        .ue-scope-container .ue-card-title-large {
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: clamp(28px, 4vw, 50px);
-          color: #fff;
-          letter-spacing: 0.04em;
-          line-height: 1;
-          margin-bottom: 10px;
-        }
-
-        .ue-scope-container .ue-card-title-small {
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: clamp(20px, 2.5vw, 32px);
-          color: #fff;
-          letter-spacing: 0.04em;
-          line-height: 1;
-          margin-bottom: 4px;
-        }
-
-        .ue-scope-container .ue-card-desc {
-          font-size: clamp(13px, 1.3vw, 15px);
-          color: rgba(255,255,255,0.7);
-          line-height: 1.65;
-          max-width: 420px;
-          margin-bottom: 2px;
-        }
-
-        .ue-scope-container .ue-browse-wrap {
-          margin-top: 40px;
-          display: flex;
-          justify-content: center;
-        }
-
-        .ue-scope-container .ue-browse-btn {
-          display: inline-block;
-          padding: 14px 40px;
-          border: 2px solid #fff;
-          color: #fff;
-          background: transparent;
-          font-family: 'Barlow', sans-serif;
-          font-size: 13px;
-          font-weight: 700;
-          letter-spacing: 0.2em;
-          text-transform: uppercase;
-          text-decoration: none;
-          cursor: pointer;
-          transition: all 0.25s ease;
-        }
-
-        .ue-scope-container .ue-browse-btn:hover {
-          background: #fff;
-          color: #0a0a0a;
-        }
-
-        /* Tablet Responsive */
-        @media (max-width: 768px) {
-          .ue-scope-container .ue-grid {
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-          }
-          .ue-scope-container .ue-card-large {
-            grid-column: 1; grid-row: 1; min-height: 360px;
-          }
-          .ue-scope-container .ue-card-small {
-            grid-column: 1; min-height: 200px;
-          }
-          .ue-scope-container .ue-card-small:first-of-type { grid-row: 2; }
-          .ue-scope-container .ue-card-small:last-of-type  { grid-row: 3; }
-        }
-      `}</style>
-
-      <section className="ue-section">
-        <div className="ue-heading">
-          <p className="ue-label">Our Events</p>
-          <h2 className="ue-title">
-            <strong>UPCOMING </strong>
-            <span>EVENTS</span>
+        {/* Heading Section */}
+        <div className="text-center mb-12">
+          <p className="text-[#CC1E1E] text-xs font-bold tracking-[0.3em] uppercase mb-2.5">
+            Our Events
+          </p>
+          <h2 className="text-[clamp(42px,7vw,80px)] leading-none tracking-[0.04em] font-bold uppercase m-0">
+            UPCOMING{" "}
+            <span 
+              className="text-transparent" 
+              style={{ WebkitTextStroke: "2px #E8E0D5" }}
+            >
+              EVENTS
+            </span>
           </h2>
         </div>
 
-        <div className="ue-grid">
-          <div className="ue-card ue-card-large">
-            <img src={events[0].image} alt={events[0].title} />
-            <div className="ue-overlay" />
-            <div className="ue-card-body">
-              <p className="ue-card-date">{events[0].date}</p>
-              <h3 className="ue-card-title-large">{events[0].title}</h3>
-              <p className="ue-card-desc">{events[0].desc}</p>
+        {/* Grid Layout */}
+        <div className="w-full max-w-275 grid grid-cols-1 md:grid-cols-2 gap-3">
+          
+          {/* Large Card (DJ Dominique) */}
+          <div className="group relative overflow-hidden rounded-sm cursor-pointer min-h-120 md:row-span-2">
+            <img 
+              src={events[0].image} 
+              alt={events[0].title} 
+              className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-[#0D0B0B]/90 via-transparent to-transparent z-10" />
+            <div className="absolute bottom-0 left-0 right-0 z-20 p-7">
+              <p className="text-[#9A8F85] text-sm mb-1">{events[0].date}</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-2 uppercase tracking-tight">
+                {events[0].title}
+              </h3>
+              <p className="text-[#9A8F85] text-sm leading-relaxed max-w-md">
+                {events[0].desc}
+              </p>
               <TicketLink />
             </div>
           </div>
 
-          <div className="ue-card ue-card-small">
-            <img src={events[1].image} alt={events[1].title} />
-            <div className="ue-overlay" />
-            <div className="ue-card-body">
-              <p className="ue-card-date">{events[1].date}</p>
-              <h3 className="ue-card-title-small">{events[1].title}</h3>
+          {/* Small Card 1 (Neon Nights) */}
+          <div className="group relative overflow-hidden rounded-sm cursor-pointer min-h-55">
+            <img 
+              src={events[1].image} 
+              alt={events[1].title} 
+              className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-[#0D0B0B]/90 via-transparent to-transparent z-10" />
+            <div className="absolute bottom-0 left-0 right-0 z-20 p-7">
+              <p className="text-[#9A8F85] text-sm mb-1">{events[1].date}</p>
+              <h3 className="text-xl font-bold uppercase tracking-tight">
+                {events[1].title}
+              </h3>
               <TicketLink />
             </div>
           </div>
 
-          <div className="ue-card ue-card-small">
-            <img src={events[2].image} alt={events[2].title} />
-            <div className="ue-overlay" />
-            <div className="ue-card-body">
-              <p className="ue-card-date">{events[2].date}</p>
-              <h3 className="ue-card-title-small">{events[2].title}</h3>
+          {/* Small Card 2 (Paul Freedman) */}
+          <div className="group relative overflow-hidden rounded-sm cursor-pointer min-h-55">
+            <img 
+              src={events[2].image} 
+              alt={events[2].title} 
+              className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-[#0D0B0B]/90 via-transparent to-transparent z-10" />
+            <div className="absolute bottom-0 left-0 right-0 z-20 p-7">
+              <p className="text-[#9A8F85] text-sm mb-1">{events[2].date}</p>
+              <h3 className="text-xl font-bold uppercase tracking-tight">
+                {events[2].title}
+              </h3>
               <TicketLink />
             </div>
           </div>
         </div>
 
-        <div className="ue-browse-wrap">
-          <a href="#" className="ue-browse-btn">Browse All Events</a>
+        {/* CTA Button */}
+        <div className="mt-10">
+          <a
+            href="#"
+            className="inline-flex items-center gap-2.5 bg-linear-to-r from-[#CC1E1E] to-[#E8382A] text-[#E8E0D5] px-7 py-3.5 rounded-full text-[15px] font-semibold no-underline transition-all duration-200 hover:scale-105 hover:shadow-[0_8px_32px_rgba(204,30,30,0.4)]"
+          >
+            Browse All Events
+          </a>
         </div>
       </section>
     </div>

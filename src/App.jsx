@@ -7,6 +7,8 @@ import Header from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./page/Home";
 import TicketPage from "./page/TicketPage";
+import Event from "./page/Event";
+import SingleEvent from "./page/SingleEvent";
 
 //import Footer from "./components/Footer";
 //import ScrollToTop from "./components/ScrollToTop";
@@ -34,6 +36,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tickets" element={<TicketPage />} />
+        <Route path="/event" element={<Event /> } />
+        <Route path="/single-event" element={<SingleEvent /> } />
         {/* <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} /> */}
       </Routes>
