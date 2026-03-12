@@ -69,8 +69,8 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="mailto:hi@nightly.com" className="hover:text-[#E8E0D5] transition-colors">
-                HI@NIGHTLY.COM
+              <a href="mailto:HI@studio35.COM" className="hover:text-[#E8E0D5] transition-colors">
+                HI@studio35.COM
               </a>
             </li>
           </ul>
