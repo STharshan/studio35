@@ -1,6 +1,6 @@
 const ContactSection = () => {
   return (
-    <section className="bg-[#0D0B0B] text-[#E8E0D5] py-16 px-6 md:py-24 md:px-20 min-h-screen flex items-center">
+    <section id="contact" className="bg-[#0D0B0B] text-[#E8E0D5] py-16 px-6 md:py-24 md:px-20 min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto w-full">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
@@ -8,10 +8,7 @@ const ContactSection = () => {
             Get in Touch
           </h2>
           <p className="text-[#9A8F85] max-w-md text-sm md:text-base leading-relaxed pt-2">
-            Have questions, requests, or want to book a table? Reach out to us
-            and our team will get back to you promptly. Whether it's VIP
-            reservations, event inquiries, or general information, we're here to
-            make your night at 99club unforgettable.
+           Have questions, requests, or want to book a table? Reach out to us and our team will get back to you promptly. Whether it's VIP reservations, event inquiries, or general information, we're here to make your night at Studio 35 unforgettable.
           </p>
         </div>
 

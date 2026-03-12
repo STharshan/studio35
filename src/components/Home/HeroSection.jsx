@@ -22,7 +22,7 @@ const FRAG_SHADER = `
   }
 `;
 
-export default function FungibleLove() {
+export default function HeroSection() {
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
   const stateRef = useRef({});
@@ -201,9 +201,9 @@ export default function FungibleLove() {
               textShadow: "0 4px 40px rgba(13, 11, 11, 0.8)",
             }}
           >
-            Fungible
+            Studio 
             <br />
-            Love
+            35
           </h1>
         </div>
       </div>

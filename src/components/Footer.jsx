@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="bg-[#0D0B0B] text-[#9A8F85] pt-16 pb-8 px-6">
-      
+
       {/* Top Section */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
@@ -18,13 +18,13 @@ export default function Footer() {
           </p>
 
           <p className="text-sm font-semibold text-[#E8E0D5] mb-3">
-            FOLLOW @NITELY
+            FOLLOW @studio35
           </p>
 
           <div className="flex gap-3">
             {[Instagram, Twitter, Facebook, Youtube].map((Icon, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="w-10 h-10 rounded-full bg-linear-to-r from-[#CC1E1E] to-[#E8382A] flex items-center justify-center text-[#E8E0D5] cursor-pointer hover:opacity-80 transition"
               >
                 <Icon size={18} />
@@ -54,9 +54,9 @@ export default function Footer() {
           <h3 className="text-[#E8E0D5] font-semibold mb-4">CONTACT</h3>
           <ul className="space-y-3 text-sm">
             <li>
-              <a 
-                href="https://www.google.com/maps/search/12+Cambridge+St,+London" 
-                target="_blank" 
+              <a
+                href="https://www.google.com/maps/search/12+Cambridge+St,+London"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#E8E0D5] transition-colors"
               >
@@ -87,13 +87,41 @@ export default function Footer() {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-[#2A1E1A] mt-12 pt-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between text-sm gap-4 text-[#9A8F85]">
-          <Link to="/style-guide" className="hover:text-[#E8E0D5] transition-colors">STYLE GUIDE</Link>
-          <Link to="/licencing" className="hover:text-[#E8E0D5] transition-colors">LICENCING</Link>
-          <Link to="/changelog" className="hover:text-[#E8E0D5] transition-colors">CHANGELOG</Link>
-          <p>WEBFLOW | DESIGNER</p>
+      <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; {new Date().getFullYear()} Studio 35. All rights reserved.</p>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="mt-2 flex flex-col sm:flex-row justify-center items-center gap-3 text-center font-semibold text-gray-400">
+        {/* Left: Terms & Privacy */}
+        <div className="flex gap-4 text-sm">
+          <Link
+            to="/terms"
+            className="text-gray-400 hover:text-[#cc1e1e] transition duration-300"
+          >
+            Terms & Conditions
+          </Link>
+          <span className="text-gray-500">|</span>
+          <Link
+            to="/privacy"
+            className="text-gray-400 hover:text-[#cc1e1e] transition duration-300"
+          >
+            Privacy Policy
+          </Link>
         </div>
+
+        {/* Center: Powered by Ansely (unchanged) */}
+        <p className="text-center font-semibold text-gray-400">
+          Powered by{" "}
+          <a
+            href="https://www.ansely.co.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#cc1e1e] hover:underline"
+          >
+            Ansely
+          </a>
+        </p>
       </div>
 
     </footer>

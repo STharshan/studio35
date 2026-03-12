@@ -9,43 +9,32 @@ export default function AboutSection() {
       className="relative py-24 px-6 overflow-hidden bg-[#0D0B0B]"
     >
 
-      {/* Background Script Text - Updated to subtle Worn White */}
-      <h1 className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[120px] md:text-[200px] text-[#E8E0D5]/5 whitespace-nowrap pointer-events-none">
-        Club Passion
-      </h1>
-
       <div className="max-w-4xl mx-auto text-center relative z-10">
 
         {/* Small Label - Studio Red */}
-        <p className="italic mb-2" style={{ color: '#CC1E1E' }}>No.1 Night Club</p>
+        <p className="text-[#CC1E1E] mb-2">No.1 Night Club</p>
 
         {/* Title - Worn White */}
         <h2
-          className="text-3xl md:text-4xl font-bold tracking-wide mb-6"
-          style={{ color: '#E8E0D5' }}
+          className="text-3xl text-[#E8E0D5] md:text-4xl font-bold tracking-wide mb-6"
         >
           ABOUT THE CLUB
         </h2>
 
         {/* Description - Ash Grey */}
         <p className="text-sm md:text-base leading-relaxed mb-8" style={{ color: '#9A8F85' }}>
-          Night Club 128, born of the namesake catch phrase, “1 of a kind,” has endured
-          continuous waves of competition and outlasted the rise and fall of countless
-          nightlife trends.
+          Studio 35, born of the namesake spirit of pure entertainment and electric energy, has endured continuous waves of competition and outlasted the rise and fall of countless nightlife trends.
         </p>
 
         {/* Contact Link - Studio Red Accent */}
-        <button
-          className="text-sm pb-1 transition border-b"
-          style={{
-            color: '#E8E0D5',
-            borderColor: '#CC1E1E'
-          }}
+        <a  
+          href="/#contact"
+          className="text-sm pb-1 transition border-b text-[#E8E0D5] border-[#CC1E1E]"
           onMouseOver={(e) => e.target.style.color = '#CC1E1E'}
           onMouseOut={(e) => e.target.style.color = '#E8E0D5'}
         >
           Contact Us
-        </button>
+        </a>
 
         {/* Video Thumbnail */}
         <div className="mt-14 flex justify-center">
@@ -61,8 +50,7 @@ export default function AboutSection() {
             {/* Play Button - Studio Red */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div
-                className="w-16 h-16 border-2 rounded-full flex items-center justify-center"
-                style={{ borderColor: '#CC1E1E' }}
+                className="w-16 h-16 border-2 rounded-full flex border-[#CC1E1E] items-center justify-center"
               >
                 <div
                   className="w-0 h-0 border-l-14 border-y-10 border-y-transparent ml-1"

@@ -9,14 +9,11 @@ import Home from "./page/Home";
 import TicketPage from "./page/TicketPage";
 import Event from "./page/Event";
 import SingleEvent from "./page/SingleEvent";
-
-//import Footer from "./components/Footer";
-//import ScrollToTop from "./components/ScrollToTop";
-//import GDPRBanner from "./components/GDPRBanner";
-//import Home from "./page/Home";
-//import TermsConditions from "./components/Term";
-//import PrivacyPolicy from "./components/PrivacyPolicy";
-//import ScrollToHash from "../src/components/ScrollToHash"
+import ScrollToHash from "./components/ScrollToHash";
+import ScrollToTop from "./components/ScrollToTop";
+import TermsConditions from "./components/Term";
+import PrivacyPolicy from "./components/Privacy";
+import GDPRConsent from "./components/GDPRButton";
 
 function App() {
   useEffect(() => {
@@ -30,19 +27,19 @@ function App() {
 
   return (
     <Router>
-        {/* <ScrollToHash />
-      <ScrollToTop /> */}
+      <ScrollToHash />
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tickets" element={<TicketPage />} />
-        <Route path="/event" element={<Event /> } />
-        <Route path="/single-event" element={<SingleEvent /> } />
-        {/* <Route path="/terms-conditions" element={<TermsConditions />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} /> */}
+        <Route path="/event" element={<Event />} />
+        <Route path="/single-event" element={<SingleEvent />} />
+        <Route path="/terms" element={<TermsConditions />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
-      {/* <GDPRBanner /> */}
+      <GDPRConsent />
     </Router>
   );
 }

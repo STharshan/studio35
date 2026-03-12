@@ -1,4 +1,5 @@
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const events = [
   {
@@ -6,7 +7,7 @@ const events = [
     date: "AUG 25, 2023",
     title: "DJ DOMINIQUE",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "ticket.jpg",
+    image: "ticket.png",
     size: "large",
   },
   {
@@ -29,13 +30,13 @@ const events = [
 
 function TicketLink() {
   return (
-    <a
-      href="#"
+    <Link
+      to="/single-event"
       className="group/link inline-flex items-center gap-1.5 mt-3.5 text-[13px] font-bold tracking-[0.12em] uppercase no-underline transition-colors duration-200 text-[#E8E0D5] hover:text-[#E8382A]"
     >
-      GET TICKETS
+      VIEW EVENT
       <ChevronRight size={14} strokeWidth={3} />
-    </a>
+    </Link>
   );
 }
 

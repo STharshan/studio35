@@ -6,7 +6,7 @@ const slides = [
     id: 1,
     title: "The Dancefloor",
     subtitle: "Lose yourself under neon lights and booming beats as the dancefloor comes alive with energy and excitement.",
-    image: "ticket.jpg",
+    image: "/ticket.png", // Ensure the extension matches your file
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const slides = [
   {
     id: 4,
     title: "The Drinks",
-    subtitle: "Signature cocktails and handcrafted creations flow all night, adding flavor to the unforgettable vibe.",
+    subtitle: "Signature cocktails and handcrafted creations flow all night, adding flavor to the unforgettable Studio 35 vibe.",
     image: "https://cdn.prod.website-files.com/689c985fb38694a674ae4ede/68c51493117bb751fdccc62e_18971.avif",
   },
   {
@@ -104,9 +104,7 @@ export default function EventSlider() {
           Where the Magic Happens
         </h2>
         <p className="text-base text-[#9A8F85] max-w-120 leading-relaxed m-0">
-          Step into the world through our showcase. From electrifying nights
-          to unforgettable moments, here's a glimpse of what makes the
-          experience unique.
+          Step into the world of Studio 35 through our showcase. From electrifying nights to unforgettable moments, here's a glimpse of what makes the Studio 35 experience unique.
         </p>
       </header>
 
@@ -121,8 +119,8 @@ export default function EventSlider() {
             ? isPrev
               ? handlePrev
               : isNext
-              ? handleNext
-              : undefined
+                ? handleNext
+                : undefined
             : undefined;
 
           return (

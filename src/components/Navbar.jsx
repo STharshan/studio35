@@ -9,7 +9,7 @@ export default function Header() {
     <header className="w-full">
       {/* Promo Bar */}
       <div className="text-center text-[#E8E0D5] text-sm py-2 bg-linear-to-r from-[#CC1E1E] to-[#E8382A]">
-        GET 10% OFF: use the code <span className="font-semibold">NITELY</span> on checkout
+        GRAND OPENING SPECIAL Get 20% OFF your first booking!
       </div>
 
       {/* Navbar */}

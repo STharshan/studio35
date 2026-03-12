@@ -4,7 +4,7 @@ const EventsHero = () => {
 
       {/* Background Image */}
       <img
-        src="logo.png"
+        src="event.png"
         alt="Events Background"
         className="absolute inset-0 w-full h-full object-cover"
       />

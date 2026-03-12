@@ -1,137 +1,70 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { Music, Crown, Users, GlassWater, ArrowRight } from "lucide-react";
 
 /* ─── Service Data ─────────────────────────────────────────── */
 const services = [
   {
     id: 1,
-    rotation: 0,
+    rotation: "rotate-0",
     title: "Live Music Experience",
     desc: "Get lost in the rhythm as our DJs and performers deliver high-energy sets that keep the crowd moving all night long. Each beat, light, and visual is crafted to create an electrifying and unforgettable atmosphere.",
-    icon: (
-      <svg viewBox="0 0 56 56" fill="none" width="52" height="52">
-        <rect width="56" height="56" rx="12" fill="#0D0B0B" />
-        <path d="M20 36V22l18 7-18 7z" fill="url(#i1s)" />
-        <circle cx="38" cy="20" r="5" stroke="url(#i1s)" strokeWidth="1.8" />
-        <path d="M33 20h-8" stroke="url(#i1s)" strokeWidth="1.8" strokeLinecap="round" />
-        <defs>
-          <linearGradient id="i1s" x1="14" y1="14" x2="42" y2="42" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#CC1E1E" /><stop offset="1" stopColor="#E8382A" />
-          </linearGradient>
-        </defs>
-      </svg>
-    ),
+    IconComponent: Music, // Passing the component itself
   },
   {
     id: 2,
-    rotation: 1.6,
+    rotation: "rotate-[1.6deg]",
     title: "VIP Lounge Access",
     desc: "Relax in style with exclusive seating, personalized service, and premium amenities. Every detail is thoughtfully designed to make your night luxurious, comfortable, and absolutely unforgettable from start to finish.",
-    icon: (
-      <svg viewBox="0 0 56 56" fill="none" width="52" height="52">
-        <rect width="56" height="56" rx="12" fill="#0D0B0B" />
-        <rect x="12" y="16" width="32" height="22" rx="4" stroke="url(#i2s)" strokeWidth="1.8" />
-        <path d="M18 26h6M18 30h10M34 26h4" stroke="url(#i2s)" strokeWidth="1.8" strokeLinecap="round" />
-        <circle cx="36" cy="30" r="3" stroke="url(#i2s)" strokeWidth="1.8" />
-        <defs>
-          <linearGradient id="i2s" x1="12" y1="16" x2="44" y2="38" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#CC1E1E" /><stop offset="1" stopColor="#E8382A" />
-          </linearGradient>
-        </defs>
-      </svg>
-    ),
+    IconComponent: Crown,
   },
   {
     id: 3,
-    rotation: 6,
+    rotation: "rotate-[6deg]",
     title: "Private Event Hosting",
     desc: "Celebrate birthdays, corporate gatherings, or special occasions in spaces perfectly tailored just for you. Our expert team handles every single detail to ensure your private event is flawless and unforgettable.",
-    icon: (
-      <svg viewBox="0 0 56 56" fill="none" width="52" height="52">
-        <rect width="56" height="56" rx="12" fill="#0D0B0B" />
-        <path d="M28 12l18 10v14l-18 8-18-8V22l18-10z" stroke="url(#i3s)" strokeWidth="1.8" strokeLinejoin="round" />
-        <path d="M28 12v22M10 22l18 10 18-10" stroke="url(#i3s)" strokeWidth="1.6" />
-        <defs>
-          <linearGradient id="i3s" x1="10" y1="12" x2="46" y2="44" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#CC1E1E" /><stop offset="1" stopColor="#E8382A" />
-          </linearGradient>
-        </defs>
-      </svg>
-    ),
+    IconComponent: Users,
   },
   {
     id: 4,
-    rotation: 9,
+    rotation: "rotate-[9deg]",
     title: "Signature Cocktails & Bar",
-    desc: "Savor expertly crafted cocktails that excite your senses and perfectly complement the vibrant 99club energy. Each drink is thoughtfully designed to enhance your night and leave a lasting, unforgettable impression.",
-    icon: (
-      <svg viewBox="0 0 56 56" fill="none" width="52" height="52">
-        <rect width="56" height="56" rx="12" fill="#0D0B0B" />
-        <path d="M22 42c0-8 3-14 6-14s6 6 6 14" stroke="url(#i4s)" strokeWidth="1.8" strokeLinecap="round" />
-        <path d="M28 28V18M24 22l4-4 4 4" stroke="url(#i4s)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M14 42h28" stroke="url(#i4s)" strokeWidth="2" strokeLinecap="round" />
-        <defs>
-          <linearGradient id="i4s" x1="14" y1="14" x2="42" y2="42" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#CC1E1E" /><stop offset="1" stopColor="#E8382A" />
-          </linearGradient>
-        </defs>
-      </svg>
-    ),
+    desc: "Savor expertly crafted cocktails that excite your senses and perfectly complement the vibrant Studio 35 energy. Each drink is thoughtfully designed to enhance your night and leave a lasting, unforgettable impression.",
+    IconComponent: GlassWater,
   },
 ];
 
-/* ─── Shared card renderer ─────────────────────────────────── */
+/* ─── Icon Wrapper ────────────────────────────────────────── */
+function IconWrapper({ Icon }) {
+  return (
+    <div className="w-13 h-13 bg-[#0D0B0B] rounded-xl flex items-center justify-center">
+      <Icon 
+        size={28} 
+        className="text-[#E8382A]" 
+        strokeWidth={2} 
+      />
+    </div>
+  );
+}
+
+/* ─── Service Card ────────────────────────────────────────── */
 function ServiceCard({ service, translateY, zIndex, opacity, isMobile }) {
   return (
     <div
+      className={`absolute w-full ${isMobile ? "max-w-full" : "max-w-105"} transition-all duration-75 ease-linear will-change-transform`}
       style={{
-        position: "absolute",
-        width: "100%",
-        maxWidth: isMobile ? "100%" : 420,
-        zIndex,
-        transform: `translateY(${translateY}%) rotate(${service.rotation}deg)`,
-        opacity,
-        willChange: "transform, opacity",
+        zIndex: zIndex,
+        opacity: opacity,
+        transform: `translateY(${translateY}%)`,
       }}
     >
-      <div
-        style={{
-          background: "linear-gradient(45deg, #CC1E1E, #E8382A)",
-          borderRadius: 12,
-          padding: "1.5px",
-          boxShadow: "0 4px 48px rgba(204,30,30,0.15)",
-        }}
-      >
-        <div
-          style={{
-            background: "#2A1E1A",
-            borderRadius: "10.5px",
-            padding: isMobile ? "22px 20px 26px" : "28px 28px 32px",
-            display: "flex",
-            flexDirection: "column",
-            gap: isMobile ? 14 : 18,
-          }}
-        >
-          <div>{service.icon}</div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-            <h3
-              style={{
-                fontSize: isMobile ? 17 : 20,
-                fontWeight: 700,
-                color: "#E8E0D5",
-                lineHeight: 1.3,
-                margin: 0,
-              }}
-            >
+      <div className={`${service.rotation} bg-linear-to-r from-[#CC1E1E] to-[#E8382A] rounded-xl p-[1.5px] shadow-[0_4px_48px_rgba(204,30,30,0.15)]`}>
+        <div className="bg-[#2A1E1A] rounded-[10.5px] flex flex-col gap-3.5 md:gap-4.5 p-[22px_20px_26px] md:p-[28px_28px_32px]">
+          <IconWrapper Icon={service.IconComponent} />
+          <div className="flex flex-col gap-2">
+            <h3 className="text-[17px] md:text-[20px] font-bold text-[#E8E0D5] leading-[1.3] m-0">
               {service.title}
             </h3>
-            <p
-              style={{
-                fontSize: isMobile ? 13 : 14,
-                lineHeight: 1.75,
-                color: "#9A8F85",
-                margin: 0,
-              }}
-            >
+            <p className="text-[13px] md:text-[14px] text-[#9A8F85] leading-[1.75] m-0">
               {service.desc}
             </p>
           </div>
@@ -141,33 +74,20 @@ function ServiceCard({ service, translateY, zIndex, opacity, isMobile }) {
   );
 }
 
-/* ─── Book Now button ──────────────────────────────────────── */
+/* ─── Book Now Button ─────────────────────────────────────── */
 function BookNowBtn() {
-  const [hov, setHov] = useState(false);
   return (
     <a
       href="#contact"
-      onMouseEnter={() => setHov(true)}
-      onMouseLeave={() => setHov(false)}
-      style={{
-        display: "inline-flex", alignItems: "center", gap: 10,
-        background: "linear-gradient(70deg, #CC1E1E, #E8382A)",
-        color: "#E8E0D5", borderRadius: 999, padding: "14px 28px",
-        fontSize: 15, fontWeight: 600, textDecoration: "none",
-        transform: hov ? "scale(1.04)" : "scale(1)",
-        boxShadow: hov ? "0 8px 32px rgba(204,30,30,0.4)" : "none",
-        transition: "transform 0.2s, box-shadow 0.2s",
-      }}
+      className="inline-flex items-center gap-2.5 bg-linear-to-r from-[#CC1E1E] to-[#E8382A] text-[#E8E0D5] rounded-full px-7 py-3.5 text-[15px] font-semibold no-underline transition-all duration-200 hover:scale-[1.04] hover:shadow-[0_8px_32px_rgba(204,30,30,0.4)]"
     >
       Book Now
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-        <path d="M5 12h14M13 6l6 6-6 6" stroke="#E8E0D5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
+      <ArrowRight size={18} />
     </a>
   );
 }
 
-/* ─── Main export ──────────────────────────────────────────── */
+/* ─── Main Section ────────────────────────────────────────── */
 export default function ServicesSection() {
   const outerRef = useRef(null);
   const [progress, setProgress] = useState(0);
@@ -192,7 +112,7 @@ export default function ServicesSection() {
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
-  }, [isMobile]);
+  }, []);
 
   const TOTAL_EXITS = services.length - 1;
   const phaseSize = 1 / TOTAL_EXITS;
@@ -212,75 +132,31 @@ export default function ServicesSection() {
   return (
     <section
       ref={outerRef}
-      style={{ background: "#0D0B0B", position: "relative", height: "300vh" }}
+      className="bg-[#0D0B0B] relative h-[300vh]"
     >
-      <div
-        style={{
-          position: "sticky",
-          top: 0,
-          height: "100vh",
-          display: "flex",
-          alignItems: "center",
-          overflow: "hidden",
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            maxWidth: 1440,
-            margin: "0 auto",
-            padding: isMobile ? "0 20px" : "0 clamp(24px, 5vw, 80px)",
-          }}
-        >
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
-              gap: isMobile ? 36 : "clamp(40px, 6vw, 120px)",
-              alignItems: "center",
-            }}
-          >
-            <div style={{ display: "flex", flexDirection: "column", gap: isMobile ? 16 : 24 }}>
-              <h2
-                style={{
-                  fontSize: isMobile ? "1.6rem" : "clamp(1.8rem, 3.5vw, 3rem)",
-                  fontWeight: 700,
-                  color: "#E8E0D5",
-                  lineHeight: 1.15,
-                  margin: 0,
-                }}
-              >
+      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+        <div className="w-full max-w-360 mx-auto px-5 md:px-[clamp(24px,5vw,80px)]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-9 md:gap-[clamp(40px,6vw,120px)] items-center">
+
+            {/* Left Content */}
+            <div className="flex flex-col gap-4 md:gap-6">
+              <h2 className="text-[1.6rem] md:text-[clamp(1.8rem,3.5vw,3rem)] font-bold text-[#E8E0D5] leading-[1.15] m-0">
                 Our Exclusive Services
               </h2>
-              <p
-                style={{
-                  color: "#9A8F85",
-                  fontSize: isMobile ? "0.85rem" : "clamp(0.875rem, 1.3vw, 1rem)",
-                  lineHeight: 1.85,
-                  maxWidth: 460,
-                  margin: 0,
-                }}
-              >
-                At 99club, we go beyond music and lights. We create experiences that
-                bring people together, offering premium services to make every night
-                unforgettable. From world-class DJs to private bookings, our services
-                are designed to elevate your nightlife.
+              <p className="text-[#9A8F85] text-[0.85rem] md:text-[clamp(0.875rem,1.3vw,1rem)] leading-[1.85] max-w-115 m-0">
+                At Studio 35, we go beyond music and lights. We create
+                experiences that bring people together, offering premium
+                services to make every night unforgettable. From world-class DJs
+                to private bookings, our services are designed to elevate your
+                nightlife.
               </p>
-              <div style={{ marginTop: 4 }}>
+              <div className="mt-1">
                 <BookNowBtn />
               </div>
             </div>
 
-            <div
-              style={{
-                position: "relative",
-                height: isMobile ? 300 : 360,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                overflow: "visible",
-              }}
-            >
+            {/* Right Side (Card Stack) */}
+            <div className="relative h-75 md:h-90 flex justify-center items-center overflow-visible">
               {services.map((service, i) => {
                 const { translateY, opacity, zIndex } = getCardState(i);
                 return (
