@@ -15,6 +15,7 @@ import TermsConditions from "./components/Term";
 import PrivacyPolicy from "./components/Privacy";
 import GDPRConsent from "./components/GDPRButton";
 import About from "./page/About";
+import Nightclub from "./page/Nightclub";
 
 function App() {
   useEffect(() => {
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About /> } />
+         <Route path="/night-club" element={<Nightclub /> } />
         <Route path="/tickets" element={<TicketPage />} />
         <Route path="/event" element={<Event />} />
         <Route path="/single-event" element={<SingleEvent />} />
