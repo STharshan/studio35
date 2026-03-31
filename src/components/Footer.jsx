@@ -41,7 +41,7 @@ export default function Footer() {
               <Link to="/" className="hover:text-[#E8E0D5] transition-colors">HOME</Link>
             </li>
             <li>
-              <Link to="/event" className="hover:text-[#E8E0D5] transition-colors">EVENTS</Link>
+              <Link to="/what’s-On" className="hover:text-[#E8E0D5] transition-colors">⁠What’s On</Link>
             </li>
             <li>
               <Link to="/tickets" className="hover:text-[#E8E0D5] transition-colors">TICKET</Link>
