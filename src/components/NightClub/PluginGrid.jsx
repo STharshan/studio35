@@ -4,7 +4,6 @@ import React from 'react';
 const LogoCard = ({ logo, label, badgeText = "bg-[#CC1E1E]" }) => {
   return (
     /* Surface/Card: Dark Rust (#2A1E1A) */
-    /* Border: Steel Silver (#A8A9AD) */
     <div className="bg-[#2A1E1A] border border-[#A8A9AD]/10 rounded-3xl p-6 md:p-8 flex flex-col items-center justify-center shadow-2xl relative min-h-40 md:min-h-55 transition-all duration-300 hover:scale-105 hover:border-[#E8382A]/30 group">
       
       {/* Save Badge: Signal Red (#E8382A) */}
