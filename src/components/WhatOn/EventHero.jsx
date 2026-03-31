@@ -1,6 +1,6 @@
 const EventsHero = () => {
   return (
-    <section className="relative w-full h-70 sm:h-80 md:h-95 lg:h-105 overflow-hidden bg-[#0D0B0B]">
+    <section className="relative w-full h-screen overflow-hidden bg-[#0D0B0B]">
 
       {/* Background Image */}
       <img

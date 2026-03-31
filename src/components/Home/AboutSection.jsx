@@ -51,7 +51,7 @@ export default function AboutSection() {
             </video>
 
             {/* Subtle Sound Wave Motif Overlay (Signal Red #E8382A) */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B0B] via-transparent to-transparent opacity-60" />
+            <div className="absolute inset-0 bg-linear-to-t from-[#0D0B0B] via-transparent to-transparent opacity-60" />
             <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#E8382A]/20 transition-colors duration-500" />
             
           </div>

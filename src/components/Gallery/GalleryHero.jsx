@@ -22,8 +22,8 @@ const GallerySection = () => {
             <div className="absolute bottom-[15%] right-[10%] w-3 h-3 rounded-full bg-[#E8382A] blur-[1px] z-10 animate-[float_8s_ease-in-out_infinite]" />
 
             {/* 3. LARGE ANIMATED RINGS - Metallic Steel Silver (#A8A9AD) & Studio Red (#CC1E1E) */}
-            <div className="absolute -bottom-16 -left-16 w-48 h-48 md:w-64 md:h-64 border-[15px] md:border-[25px] border-[#CC1E1E]/20 rounded-full z-10 animate-[pulse_10s_ease-in-out_infinite]" />
-            <div className="absolute -bottom-10 -right-10 w-32 h-32 md:w-40 md:h-40 border-[10px] md:border-[15px] border-[#A8A9AD]/10 rounded-full z-10 animate-[pulse_12s_ease-in-out_infinite_1s]" />
+            <div className="absolute -bottom-16 -left-16 w-48 h-48 md:w-64 md:h-64 border-15 md:border-25 border-[#CC1E1E]/20 rounded-full z-10 animate-[pulse_10s_ease-in-out_infinite]" />
+            <div className="absolute -bottom-10 -right-10 w-32 h-32 md:w-40 md:h-40 border-10 md:border-15 border-[#A8A9AD]/10 rounded-full z-10 animate-[pulse_12s_ease-in-out_infinite_1s]" />
 
             {/* 4. CONTENT LAYER */}
             <div className="relative z-20 max-w-5xl w-full flex flex-col">
