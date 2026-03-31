@@ -28,9 +28,15 @@ const slides = [
   },
   {
     id: 5,
-    title: "Premium Vibes",
-    subtitle: "Exclusive lounges, personalized service, and premium vibes designed for those who want the night their way.",
+    title: "The DJ Desk",
+    subtitle: "Ever wanted to get behind the decks? Hire our professional DJ desk for your group is perfect for TikTok lives, content creation, and videos that'll have your followers wishing they were there. Book it for the night and make your moment the main event.",
     image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80"
+  },
+    {
+    id: 6,
+    title: "The Pool Tables",
+    subtitle: "Book a pool table and own your corner of the club. Whether it's a friendly game or a serious tournament among friends, our tables are ready when you are the all night long.",
+    image: "https://cdn.prod.website-files.com/689c985fb38694a674ae4ede/68b882539d384e7562393736_2148325472.avif",
   },
 ];
 
@@ -134,6 +140,7 @@ export default function EventSlider() {
               <img
                 src={slide.image}
                 alt={slide.title}
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
 

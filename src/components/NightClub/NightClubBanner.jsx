@@ -36,26 +36,27 @@ const FeatureSection = () => {
   ];
 
   return (
-    <section className="bg-[#02020a] py-20 px-6">
+    /* Primary Background: Iron Black (#0D0B0B) */
+    <section className="bg-[#0D0B0B] py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Responsive Grid: 1 col on mobile, 3 on tablet, 6 on desktop */}
+        
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-12 gap-x-4">
           {features.map((item, index) => (
             <div 
               key={index} 
               className="flex flex-col items-center text-center group cursor-default"
             >
-              {/* Icon Container with Cyan Neon Color */}
-              <div className="text-[#00f2ff] mb-6 transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_8px_rgba(0,242,265,0.4)]">
+              {/* Icon Container: Studio Red (#CC1E1E) with Signal Red (#E8382A) glow */}
+              <div className="text-[#CC1E1E] mb-6 transition-all duration-300 group-hover:scale-110 group-hover:text-[#E8382A] drop-shadow-[0_0_10px_rgba(232,56,42,0.3)]">
                 {item.icon}
               </div>
 
-              {/* Stacked Pink Text */}
+              {/* Text: Worn White (#E8E0D5) */}
               <div className="flex flex-col space-y-0">
-                <span className="text-[#e91e63] text-lg md:text-xl font-bold uppercase tracking-tight leading-none">
+                <span className="text-[#E8E0D5] text-lg md:text-xl font-bold uppercase tracking-tight leading-none">
                   {item.line1}
                 </span>
-                <span className="text-[#e91e63] text-lg mt-2 md:text-xl font-bold uppercase tracking-tight leading-none">
+                <span className="text-[#E8E0D5] text-lg mt-2 md:text-xl font-bold uppercase tracking-tight leading-none">
                   {item.line2}
                 </span>
               </div>

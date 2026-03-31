@@ -69,6 +69,7 @@ export default function UpcomingEvents() {
             <img 
               src={events[0].image} 
               alt={events[0].title} 
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-linear-to-t from-[#0D0B0B]/90 via-transparent to-transparent z-10" />
@@ -89,6 +90,7 @@ export default function UpcomingEvents() {
             <img 
               src={events[1].image} 
               alt={events[1].title} 
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-linear-to-t from-[#0D0B0B]/90 via-transparent to-transparent z-10" />
@@ -106,6 +108,7 @@ export default function UpcomingEvents() {
             <img 
               src={events[2].image} 
               alt={events[2].title} 
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-linear-to-t from-[#0D0B0B]/90 via-transparent to-transparent z-10" />

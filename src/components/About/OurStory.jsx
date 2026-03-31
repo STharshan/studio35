@@ -2,7 +2,8 @@ import React from "react";
 
 export default function OurStory() {
   return (
-    <section className="bg-black text-white w-full py-20 overflow-hidden">
+    /* Background: Iron Black (#0D0B0B) */
+    <section className="bg-[#0D0B0B] text-[#E8E0D5] w-full py-20 overflow-hidden">
       <div className="grid lg:grid-cols-2">
 
         {/* LEFT IMAGE */}
@@ -10,6 +11,7 @@ export default function OurStory() {
           <img
             src="https://cdn.prod.website-files.com/636278d56e610029b4539c93/6365281f6e190e6fc0e9f937_the-story-behind-club-x-image-club-x-webflow-template.jpg"
             alt="Club DJ"
+            loading="lazy"
             className="w-full h-full object-cover"
           />
         </div>
@@ -18,11 +20,13 @@ export default function OurStory() {
         <div className="flex items-center">
           <div className="max-w-xl px-6 py-16 lg:px-16">
 
-            <p className="text-pink-500 uppercase tracking-widest mb-4">
+            {/* Label: Ash Grey (#9A8F85) */}
+            <p className="text-[#9A8F85] uppercase tracking-widest mb-4">
               Our Story
             </p>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            {/* Heading: Worn White (#E8E0D5) */}
+            <h2 className="text-[#E8E0D5] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               THE STORY
               <br />
               BEHIND
@@ -32,7 +36,8 @@ export default function OurStory() {
               </span>
             </h2>
 
-            <p className="mt-6 text-gray-300 leading-relaxed text-lg">
+            {/* Body Copy: Ash Grey (#9A8F85) */}
+            <p className="mt-6 text-[#9A8F85] leading-relaxed text-lg">
               Ut enim ad minim veniam, quis nostrud exercitation ullamco
               laboris nisi ut aliquip ex ea commodo consequat excepteur sint
               occaecat cupidatat non lorem ipsum dolor sit amet, consectetur
@@ -44,11 +49,10 @@ export default function OurStory() {
         </div>
       </div>
 
-      {/* Outline text style */}
       <style>
         {`
         .outline-text{
-          -webkit-text-stroke:1px white;
+          -webkit-text-stroke:1px #E8E0D5;
         }
         `}
       </style>

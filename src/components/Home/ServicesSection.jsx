@@ -19,16 +19,30 @@ const services = [
   },
   {
     id: 3,
-    rotation: "rotate-[6deg]",
+    rotation: "rotate-[3deg]",
     title: "Private Event Hosting",
     desc: "Celebrate birthdays, corporate gatherings, or special occasions in spaces perfectly tailored just for you. Our expert team handles every single detail to ensure your private event is flawless and unforgettable.",
     IconComponent: Users,
   },
   {
     id: 4,
-    rotation: "rotate-[9deg]",
+    rotation: "rotate-[5deg]",
+    title: "Private DJ Hire",
+    desc: "Want the night to be truly yours ? Book one of our professional DJs exclusively for your event or group.From the set list to the vibe, your DJ takes direction from you, making every moment feel personal, electric, and uniquely crafted for your crowd.",
+    IconComponent: Users,
+  },
+  {
+    id: 5,
+    rotation: "rotate-[7deg]",
     title: "Signature Cocktails & Bar",
-    desc: "Savor expertly crafted cocktails that excite your senses and perfectly complement the vibrant Studio 35 energy. Each drink is thoughtfully designed to enhance your night and leave a lasting, unforgettable impression.",
+    desc: "Savor expertly crafted cocktails and enjoy some of the best drink prices in the city, because a great night shouldn't cost a fortune. Each drink is thoughtfully designed to complement the vibrant Studio 35 energy and keep the good times flowing all night long.",
+    IconComponent: GlassWater,
+  },
+  {
+    id: 6,
+    rotation: "rotate-[9deg]",
+    title: "Pool Tables",
+    desc: "Take a break from the dancefloor and challenge your crew to a game. Our pool tables are available to book, giving you your own corner of the club to relax, compete, and make memories between rounds.",
     IconComponent: GlassWater,
   },
 ];
@@ -37,10 +51,10 @@ const services = [
 function IconWrapper({ Icon }) {
   return (
     <div className="w-13 h-13 bg-[#0D0B0B] rounded-xl flex items-center justify-center">
-      <Icon 
-        size={28} 
-        className="text-[#E8382A]" 
-        strokeWidth={2} 
+      <Icon
+        size={28}
+        className="text-[#E8382A]"
+        strokeWidth={2}
       />
     </div>
   );

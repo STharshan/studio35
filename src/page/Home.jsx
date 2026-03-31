@@ -7,6 +7,7 @@ import GallerySection from '../components/GallerySection'
 import UpcomingEvents from '../components/Home/Event'
 import ContactSection from '../components/ContactSection'
 
+
 const Home = () => {
   return (
     <div>

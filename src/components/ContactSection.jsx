@@ -18,6 +18,7 @@ const ContactSection = () => {
             <img
               src="https://cdn.prod.website-files.com/689c985fb38694a674ae4ede/68b882539d384e7562393736_2148325472.avif"
               alt="Club interior"
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             {/* Red atmospheric overlay */}

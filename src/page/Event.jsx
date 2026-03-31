@@ -1,9 +1,9 @@
 import React from 'react'
-import EventsHero from '../components/Event/EventHero'
-import UpcomingEvents from '../components/Event/UpcomingEvent'
-import PastEvents from '../components/Event/PastEvent'
+import EventsHero from '../components/WhatOn/EventHero'
+import UpcomingEvents from '../components/WhatOn/UpcomingEvent'
+import PastEvents from '../components/WhatOn/PastEvent'
 
-const Event = () => {
+const WhatOn = () => {
   return (
     <div>
       <EventsHero />
@@ -13,4 +13,4 @@ const Event = () => {
   )
 }
 
-export default Event
+export default WhatOn

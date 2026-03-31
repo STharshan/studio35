@@ -7,7 +7,6 @@ import Header from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./page/Home";
 import TicketPage from "./page/TicketPage";
-import Event from "./page/Event";
 import SingleEvent from "./page/SingleEvent";
 import ScrollToHash from "./components/ScrollToHash";
 import ScrollToTop from "./components/ScrollToTop";
@@ -16,6 +15,9 @@ import PrivacyPolicy from "./components/Privacy";
 import GDPRConsent from "./components/GDPRButton";
 import About from "./page/About";
 import Nightclub from "./page/Nightclub";
+import Gallery from "./page/Gallery";
+import FindSpot from "./page/FindSpot";
+import WhatOn from "./page/Event";
 
 function App() {
   useEffect(() => {
@@ -34,10 +36,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About /> } />
-         <Route path="/night-club" element={<Nightclub /> } />
+        <Route path="/our-story" element={<About />} />
+        <Route path="/night-club" element={<Nightclub />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/find-the-spot" element={<FindSpot />} />
         <Route path="/tickets" element={<TicketPage />} />
-        <Route path="/event" element={<Event />} />
+        <Route path="/What’s-On" element={<WhatOn />} />
         <Route path="/single-event" element={<SingleEvent />} />
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />

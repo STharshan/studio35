@@ -11,7 +11,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <Link to="/">
-            <img src="/logo.png" alt="NITELY Logo" className="h-10 md:h-12 mb-4 object-contain" />
+            <img src="/logo.png" loading="lazy" alt="Logo" className="h-10 md:h-12 mb-4 object-contain" />
           </Link>
           <p className="text-sm leading-relaxed mb-6">
             The best night club in the <br /> United Kingdom

@@ -49,11 +49,11 @@ export default function ComingSoon() {
 
       {/* ── Parallax Text Wrapper ── */}
       {/* This container covers the whole screen and centers the text lines */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+      <div className="absolute inset-0 mt-25 flex flex-col items-center justify-center pointer-events-none">
         {LINES.map((text, i) => (
           <div
             key={i}
-            className="font-extralight tracking-tighter leading-[0.9] whitespace-nowrap transition-transform duration-100 ease-out select-none"
+            className="font-extralight  leading-[0.8] whitespace-nowrap transition-transform duration-100 ease-out select-none"
             style={{
               fontSize: "clamp(3rem, 15vw, 12rem)",
               color: "#E8E0D5",
@@ -75,6 +75,7 @@ export default function ComingSoon() {
           <img
             src={slides[current]}
             alt="Coming soon"
+            loading="lazy"
             className={`w-full h-full object-cover transition-opacity duration-400 ${fading ? 'opacity-0' : 'opacity-100'}`}
           />
           

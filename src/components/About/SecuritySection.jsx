@@ -35,18 +35,16 @@ const securityItems = [
 
 export default function SecuritySection() {
   return (
-    <section className="bg-black text-white py-20">
+    <section className="bg-[#0D0B0B] text-[#E8E0D5] py-20">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-16 gap-6">
-
           <div>
-            <p className="text-pink-500 uppercase tracking-widest mb-4">
+            <p className="text-[#9A8F85] uppercase tracking-widest mb-4">
               We care about you
             </p>
-
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h2 className="text-[#E8E0D5] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight uppercase">
               Your security <br />
               <span className="text-transparent outline-text">
                 comes first
@@ -54,45 +52,48 @@ export default function SecuritySection() {
             </h2>
           </div>
 
-          <button className="bg-pink-600 hover:bg-pink-500 transition px-8 py-4 font-semibold uppercase tracking-wide">
+          <button className="bg-[#CC1E1E] hover:bg-[#E8382A] text-[#E8E0D5] transition duration-300 px-8 py-4 font-semibold uppercase tracking-wide">
             Buy Tickets
           </button>
-
         </div>
 
         {/* CARDS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
           {securityItems.map((item, index) => (
             <div
               key={index}
-              className="bg-linear-to-br from-[#0f0f12] to-[#15151b] p-12 hover:scale-105 transition duration-300"
+              className="bg-[#1C1210] p-12 hover:scale-105 transition duration-300 border border-[#A8A9AD]/10 group"
             >
-              <img
-                src={item.icon}
-                alt={item.title}
-                className="w-10 mb-6"
+              {/* ICON COLOR CHANGE USING MASK */}
+              <div 
+                className="w-12 h-12 mb-6 bg-[#CC1E1E] group-hover:bg-[#E8382A] transition-colors duration-300"
+                style={{
+                  maskImage: `url(${item.icon})`,
+                  WebkitMaskImage: `url(${item.icon})`,
+                  maskRepeat: 'no-repeat',
+                  WebkitMaskRepeat: 'no-repeat',
+                  maskSize: 'contain',
+                  WebkitMaskSize: 'contain'
+                }}
               />
 
-              <h3 className="text-xl font-bold mb-3 uppercase">
+              <h3 className="text-xl font-bold mb-3 uppercase text-[#E8E0D5]">
                 {item.title}
               </h3>
 
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-[#9A8F85] leading-relaxed">
                 {item.desc}
               </p>
             </div>
           ))}
-
         </div>
 
       </div>
 
-      {/* Outline text style */}
       <style>
         {`
         .outline-text{
-          -webkit-text-stroke:1px white;
+          -webkit-text-stroke:1px #E8E0D5;
         }
         `}
       </style>

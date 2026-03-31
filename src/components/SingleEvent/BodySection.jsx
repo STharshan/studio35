@@ -58,7 +58,7 @@ function LightboxModal({ image, onClose }) {
         onMouseEnter={e => e.currentTarget.style.color = C.textPrimary}
         onMouseLeave={e => e.currentTarget.style.color = C.textSecondary}
       ><CloseIcon /></button>
-      <img src={image} alt="Gallery" onClick={e => e.stopPropagation()} style={{ maxWidth: "100%", maxHeight: "90vh", objectFit: "contain" }} />
+      <img src={image} loading="lazy" alt="Gallery" onClick={e => e.stopPropagation()} style={{ maxWidth: "100%", maxHeight: "90vh", objectFit: "contain" }} />
     </div>
   );
 }
@@ -68,7 +68,7 @@ function GalleryThumb({ src, onClick }) {
   return (
     <div onClick={() => onClick(src)} onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
       style={{ position: "relative", overflow: "hidden", cursor: "pointer", aspectRatio: "4/3", background: C.bgPrimary }}>
-      <img src={src} alt="" loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94)", transform: hov ? "scale(1.07)" : "scale(1)" }} />
+      <img src={src}  alt="" loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94)", transform: hov ? "scale(1.07)" : "scale(1)" }} />
       <div style={{ position: "absolute", inset: 0, background: `rgba(204, 30, 30, 0.45)`, opacity: hov ? 1 : 0, transition: "opacity 0.3s", display: "flex", alignItems: "center", justifyContent: "center", color: C.textPrimary }}>
         <ZoomIcon />
       </div>
@@ -196,7 +196,7 @@ export default function EventDetail() {
                 onMouseLeave={() => setVideoHov(false)}
                 style={{ position: "relative", cursor: "pointer", aspectRatio: "3/2", overflow: "hidden", border: `1px solid ${C.surface}` }}
               >
-                <img src={galleryImages[0]} alt="Jazz" style={{ width: "100%", height: "100%", objectFit: "cover", transform: videoHov ? "scale(1.05)" : "scale(1)", transition: "0.5s" }} />
+                <img src={galleryImages[0]} loading="lazy" alt="Jazz" style={{ width: "100%", height: "100%", objectFit: "cover", transform: videoHov ? "scale(1.05)" : "scale(1)", transition: "0.5s" }} />
                 <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <div style={{
                     width: "3.5rem", height: "3.5rem", borderRadius: "50%",
