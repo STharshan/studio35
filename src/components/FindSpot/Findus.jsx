@@ -1,16 +1,6 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 
 export default function FindUs() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false,
-      mirror: true,
-      easing: "ease-in-out",
-    });
-  }, []);
 
   return (
     /* Primary Background: Iron Black (#0D0B0B) */
@@ -33,14 +23,13 @@ export default function FindUs() {
             <div className="absolute inset-0 pointer-events-none border-2 border-transparent group-hover:border-[#E8382A]/30 transition-colors duration-500 z-10"></div>
 
             <iframe
-              title="Google Map - RS Mobile Services"
+              title="Google Map - Studio35"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.364491795745!2d-1.1274151!3d52.6354145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDM4JzA3LjUiTiAxwrAwNyczOC43Ilc!5e0!3m2!1sen!2suk!4v1647864000000!5m2!1sen!2suk"
               width="100%"
               height="100%"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              /* Apply grayscale to map to fit Iron Black theme, then color on hover */
               className="border-0 w-full h-full opacity-80 hover:opacity-100 transition-all duration-700"
             ></iframe>
           </div>

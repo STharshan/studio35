@@ -47,7 +47,6 @@ export default function ComingSoon() {
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      {/* ── Parallax Text Wrapper ── */}
       {/* This container covers the whole screen and centers the text lines */}
       <div className="absolute inset-0 mt-25 flex flex-col items-center justify-center pointer-events-none">
         {LINES.map((text, i) => (
@@ -68,8 +67,7 @@ export default function ComingSoon() {
         ))}
       </div>
 
-      {/* ── Central Image Card ── */}
-      {/* z-20 places it above the first and last lines, but below the middle line */}
+      {/* Central Image Card */}
       <div className="relative z-20 flex items-center justify-center w-full px-6">
         <div className="relative w-full max-w-[320px] md:max-w-[22vw] aspect-2/3 md:aspect-2/3.5 overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.8)] rounded-sm">
           <img

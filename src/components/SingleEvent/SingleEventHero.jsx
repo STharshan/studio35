@@ -11,7 +11,7 @@ export default function SingleEventHero({
 }) {
   return (
     <section
-      className="relative flex w-full pt-30 items-center bg-cover bg-center bg-no-repeat bg-[#0D0B0B]"
+      className="relative flex w-full pt-80 items-center bg-cover bg-center bg-no-repeat bg-[#0D0B0B]"
       style={{ backgroundImage: `url("${backgroundImage}")` }}
     >
       {/* Dark overlay using Iron Black (#0D0B0B) */}

@@ -35,8 +35,6 @@ const BrowserCompatibility = () => {
             alt="Browser Icons"
             loading="lazy"
             className="w-full h-full object-contain filter group-hover:brightness-125 transition-all"
-            /* Sound wave glow motif: Signal Red (#E8382A) 
-               Metallic shadow: Steel Silver (#A8A9AD) */
             style={{ 
               filter: 'drop-shadow(0 12px 25px rgba(232, 56, 42, 0.25)) drop-shadow(0 4px 5px rgba(168, 169, 173, 0.15))' 
             }}

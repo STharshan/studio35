@@ -1,5 +1,3 @@
-import React from 'react'
-import Header from '../components/Navbar'
 import HeroSection from '../components/Home/HeroSection'
 import AboutSection from '../components/Home/AboutSection'
 import ServicesSection from '../components/Home/ServicesSection'

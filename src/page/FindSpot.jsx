@@ -1,4 +1,3 @@
-import React from 'react'
 import DesignCenter from '../components/FindSpot/DesignCenter'
 import FindUs from '../components/FindSpot/Findus'
 

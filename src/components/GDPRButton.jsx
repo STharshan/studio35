@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function GDPRConsent() {
-  const [visible, setVisible] = useState(false); // Show consent banner
-  const [accepted, setAccepted] = useState(null); // true/false/null
-  const [showIcon, setShowIcon] = useState(false); // Show cookie icon
+  const [visible, setVisible] = useState(false);
+  const [accepted, setAccepted] = useState(null); 
+  const [showIcon, setShowIcon] = useState(false); 
 
   useEffect(() => {
     const consent = localStorage.getItem("gdprConsent");

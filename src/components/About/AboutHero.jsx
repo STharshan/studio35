@@ -45,7 +45,6 @@ export default function AboutHero() {
 
         {/* BIG IMAGE */}
         <div className="mt-14 lg:-mt-16 lg:w-[65%]">
-          {/* Border: Steel Silver (#A8A9AD) */}
           <img
             src="https://cdn.prod.website-files.com/636278d56e610029b4539c93/6365281f7510628418b46c6b_welcome-to-club-x-bottom-left-image-club-x-webflow-template.jpg"
             alt="club dj"

@@ -1,4 +1,3 @@
-import React from 'react'
 import SingleEventHero from '../components/SingleEvent/SingleEventHero'
 import EventDetail from '../components/SingleEvent/BodySection'
 import Scroll from '../components/SingleEvent/ScrollSection'

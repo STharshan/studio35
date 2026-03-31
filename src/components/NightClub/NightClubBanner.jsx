@@ -1,4 +1,3 @@
-import React from 'react';
 import { Star, Layers, Settings, MonitorSmartphone, ShoppingBag, MessageSquareMore } from 'lucide-react';
 
 const FeatureSection = () => {

@@ -1,4 +1,3 @@
-import React from "react";
 import { Facebook, Instagram, Music2, Youtube, Cloud } from "lucide-react";
 
 const Socials = () => (

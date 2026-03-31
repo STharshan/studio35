@@ -1,4 +1,3 @@
-import React from 'react'
 import FeaturesSection from '../components/NightClub/NightClubBanner'
 import DjSection from '../components/NightClub/Layout'
 import ThemeFeatures from '../components/NightClub/ThemeFeatures'

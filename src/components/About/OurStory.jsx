@@ -2,7 +2,6 @@ import React from "react";
 
 export default function OurStory() {
   return (
-    /* Background: Iron Black (#0D0B0B) */
     <section className="bg-[#0D0B0B] text-[#E8E0D5] w-full py-20 overflow-hidden">
       <div className="grid lg:grid-cols-2">
 

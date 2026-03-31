@@ -1,4 +1,3 @@
-import React from 'react'
 import GalleryHero from '../components/Gallery/GalleryHero'
 import ImageGallery from '../components/Gallery/ImageGallery'
 import VideoGallery from '../components/Gallery/VideoGallery'

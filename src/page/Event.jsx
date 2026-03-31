@@ -1,4 +1,3 @@
-import React from 'react'
 import EventsHero from '../components/WhatOn/EventHero'
 import UpcomingEvents from '../components/WhatOn/UpcomingEvent'
 import PastEvents from '../components/WhatOn/PastEvent'

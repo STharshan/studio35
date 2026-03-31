@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Music, Crown, Users, GlassWater, ArrowRight } from "lucide-react";
 
 /* ─── Service Data ─────────────────────────────────────────── */
@@ -8,7 +8,7 @@ const services = [
     rotation: "rotate-0",
     title: "Live Music Experience",
     desc: "Get lost in the rhythm as our DJs and performers deliver high-energy sets that keep the crowd moving all night long. Each beat, light, and visual is crafted to create an electrifying and unforgettable atmosphere.",
-    IconComponent: Music, // Passing the component itself
+    IconComponent: Music,
   },
   {
     id: 2,

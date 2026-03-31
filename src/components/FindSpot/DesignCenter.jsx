@@ -1,4 +1,3 @@
-import React from 'react';
 import { Calendar, Navigation } from 'lucide-react';
 
 const DesignCenter = () => {

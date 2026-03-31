@@ -62,7 +62,6 @@ export default function AboutSection() {
       {open && (
         <div className="fixed inset-0 bg-[#0D0B0B]/95 backdrop-blur-md flex items-center justify-center z-50 p-4">
           <div className="relative w-full max-w-5xl">
-            {/* Close Button: Worn White (#E8E0D5) */}
             <button
               onClick={() => setOpen(false)}
               className="absolute -top-12 right-0 transition-all hover:rotate-90 hover:text-[#CC1E1E]"
