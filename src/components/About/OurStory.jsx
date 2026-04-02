@@ -19,23 +19,20 @@ export default function OurStory() {
         <div className="flex items-center">
           <div className="max-w-xl px-6 py-16 lg:px-16">
 
-            {/* Label: Ash Grey (#9A8F85) */}
             <p className="text-[#9A8F85] uppercase tracking-widest mb-4">
               Our Story
             </p>
 
-            {/* Heading: Worn White (#E8E0D5) */}
             <h2 className="text-[#E8E0D5] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               THE STORY
               <br />
               BEHIND
               <br />
-              <span className="text-transparent outline-text">
+              <span className="text-transparent [-webkit-text-stroke:1px_#E8E0D5]">
                 CLUB X
               </span>
             </h2>
 
-            {/* Body Copy: Ash Grey (#9A8F85) */}
             <p className="mt-6 text-[#9A8F85] leading-relaxed text-lg">
               Ut enim ad minim veniam, quis nostrud exercitation ullamco
               laboris nisi ut aliquip ex ea commodo consequat excepteur sint
@@ -47,14 +44,6 @@ export default function OurStory() {
           </div>
         </div>
       </div>
-
-      <style>
-        {`
-        .outline-text{
-          -webkit-text-stroke:1px #E8E0D5;
-        }
-        `}
-      </style>
     </section>
   );
 }

@@ -44,9 +44,10 @@ export default function SecuritySection() {
             <p className="text-[#9A8F85] uppercase tracking-widest mb-4">
               We care about you
             </p>
+
             <h2 className="text-[#E8E0D5] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight uppercase">
               Your security <br />
-              <span className="text-transparent outline-text">
+              <span className="text-transparent [-webkit-text-stroke:1px_#E8E0D5]">
                 comes first
               </span>
             </h2>
@@ -64,8 +65,8 @@ export default function SecuritySection() {
               key={index}
               className="bg-[#1C1210] p-12 hover:scale-105 transition duration-300 border border-[#A8A9AD]/10 group"
             >
-              {/* ICON COLOR CHANGE USING MASK */}
-              <div 
+              {/* ICON */}
+              <div
                 className="w-12 h-12 mb-6 bg-[#CC1E1E] group-hover:bg-[#E8382A] transition-colors duration-300"
                 style={{
                   maskImage: `url(${item.icon})`,
@@ -89,14 +90,6 @@ export default function SecuritySection() {
         </div>
 
       </div>
-
-      <style>
-        {`
-        .outline-text{
-          -webkit-text-stroke:1px #E8E0D5;
-        }
-        `}
-      </style>
     </section>
   );
 }

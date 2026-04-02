@@ -50,7 +50,7 @@ const WooCommerceLogo = () => (
 const ContactForm7Logo = () => (
   /* Using Studio Red for the branding box */
   <div className="bg-[#CC1E1E] rounded-lg p-2 flex items-center justify-center w-16 h-16 md:w-20 md:h-20 shadow-[0_0_15px_rgba(204,30,30,0.3)]">
-    <span className="text-[#0D0B0B] font-sans font-black text-5xl md:text-6xl">7</span>
+    <span className="text-[#0D0B0B] font-black text-5xl md:text-6xl">7</span>
   </div>
 );
 
