@@ -18,14 +18,12 @@ export default function AboutHero() {
               WELCOME TO
               <br />
               <span className="text-transparent [-webkit-text-stroke:1px_#E8E0D5] uppercase">
-                Club X
+                 STUDIO 35
               </span>
             </h1>
 
             <p className="mt-6 text-[#9A8F85] text-lg">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat excepteur
-              sint occaecat.
+              Born from a passion for unforgettable nights, Studio 35 has been the heartbeat of the city's nightlife scene — where great music, great drinks, and even greater people come together.
             </p>
           </div>
 

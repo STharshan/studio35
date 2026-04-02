@@ -3,32 +3,32 @@ import React from "react";
 const securityItems = [
   {
     title: "Security Team",
-    desc: "Ut enim ad minim veniam quis mitan nostrud exercitation ullamco",
+    desc: "Our trained professional security team is present throughout the venue all night, ensuring every guest feels safe, respected, and looked after from entry to exit.",
     icon: "https://cdn.prod.website-files.com/636278d56e610029b4539c93/6365425cad99267c3985c07e_security-team-icon-club-x-webflow-template.svg",
   },
   {
     title: "Surveillance",
-    desc: "Ut enim ad minim veniam quis mitan nostrud exercitation ullamco",
+    desc: "Studio 35 operates a comprehensive CCTV surveillance system covering all areas of the venue, monitored continuously throughout the night for your protection.",
     icon: "https://cdn.prod.website-files.com/636278d56e610029b4539c93/6365425dbf35d064a47eaed4_surveillance-icon-club-x-webflow-template.svg",
   },
   {
     title: "First Aid",
-    desc: "Enim eu turpis egestas pretium aenean pharetra magna fermentum",
+    desc: "Qualified first aiders are on site every night, fully equipped and ready to respond quickly should any guest require medical attention or assistance.",
     icon: "https://cdn.prod.website-files.com/636278d56e610029b4539c93/63654246deeced1e737f2360_first-aid-icon-club-x-webflow-template.svg",
   },
   {
     title: "Metal Detectors",
-    desc: "Vitae suscipit tellus mauris a diam maecenas sed enim ut egestas",
+    desc: "All guests pass through metal detector checks upon entry, helping us maintain a safe and secure environment for everyone inside the venue.",
     icon: "https://cdn.prod.website-files.com/636278d56e610029b4539c93/6365425e99fdc5a449f2e542_metal-detectors-icon-club-x-webflow-template.svg",
   },
   {
     title: "Sanitizer Area",
-    desc: "Sed augue lacus viverra vitae congue eu consequat ac felis ullamcorper",
+    desc: "Hand sanitizer stations are positioned throughout the club, keeping hygiene front of mind so you can focus on having a great night worry-free.",
     icon: "https://cdn.prod.website-files.com/636278d56e610029b4539c93/6365425d9ba03e2ae8d2e5c9_sanitizer-area-icon-club-x-webflow-template.svg",
   },
   {
     title: "Smoke Detector",
-    desc: "Vestibulum morbi blandit cursus risus at morbi tristique senectus",
+    desc: "Studio 35 is fitted with a full smoke detection and fire safety system, regularly inspected and maintained to the highest safety standards.",
     icon: "https://cdn.prod.website-files.com/636278d56e610029b4539c93/6365426a06208b8b82f65911_smoke-detector-icon-club-x-webflow-template.svg",
   },
 ];
@@ -54,7 +54,7 @@ export default function SecuritySection() {
           </div>
 
           <button className="bg-[#CC1E1E] hover:bg-[#E8382A] text-[#E8E0D5] transition duration-300 px-8 py-4 font-semibold uppercase tracking-wide">
-            Buy Tickets
+            Book Tickets
           </button>
         </div>
 

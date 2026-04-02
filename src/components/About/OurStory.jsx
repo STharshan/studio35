@@ -29,16 +29,12 @@ export default function OurStory() {
               BEHIND
               <br />
               <span className="text-transparent [-webkit-text-stroke:1px_#E8E0D5]">
-                CLUB X
+                STUDIO 35
               </span>
             </h2>
 
             <p className="mt-6 text-[#9A8F85] leading-relaxed text-lg">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat excepteur sint
-              occaecat cupidatat non lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor dolor si incididunt ut
-              labore et dolore magna aliqua.
+              Studio 35 didn't happen overnight. It was built night by night, crowd by crowd, over years of dedication to creating a space where everyone belongs. What started as a vision for a venue that combined raw energy with real comfort has grown into the city's most loved nightlife destination. From the dancefloor to the pool tables, from the VIP lounges to the bar, every corner of Studio 35 was designed with one purpose — to give you a night worth remembering.
             </p>
 
           </div>

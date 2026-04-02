@@ -1,75 +1,73 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
+import galleryBg from "/event.png";
 
-const Hero = () => {
+const NightclubHero = () => {
+  // Color Palette Constants
+  const colors = {
+    ironBlack: "#0D0B0B",    // Primary Background
+    rustDark: "#1C1210",     // Secondary Background
+    studioRed: "#CC1E1E",    // Brand Red
+    signalRed: "#E8382A",    // Accent Red
+    wornWhite: "#E8E0D5",    // Text Primary
+    ashGrey: "#9A8F85",      // Text Secondary
+    steelSilver: "#A8A9AD",  // Metallic Detail
+    darkRust: "#2A1E1A",     // Surface/Card
+  };
+
   return (
-    /* Primary Background: Iron Black (#0D0B0B) */
-    <div className="relative min-h-screen w-full overflow-hidden text-center text-[#E8E0D5] flex flex-col items-center bg-[#0D0B0B]">
-      
-      {/* 1. Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline 
-        className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover brightness-[0.4] contrast-[1.2]"
-      >
-        <source src="/ticket.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <header
+      id="page-header"
+      style={{ backgroundColor: colors.ironBlack }}
+      className="relative w-full overflow-hidden h-[80vh] min-h-150 flex items-center justify-center py-24"
+    >
+      {/* Background Image */}
+      <img
+        src={galleryBg} 
+        alt="Background"
+        className="absolute inset-0 z-0 h-full w-full object-cover object-center opacity-60"
+      />
 
-      {/* Content Overlay */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-12 md:py-16 flex flex-col items-center">
-        
-        {/* 2. Logo and Header */}
-        <header className="flex flex-col items-center mb-16 md:mb-20 mt-25">
-          <img 
-            src="/logo.png"
-            alt="Logo" 
-            loading="lazy"
-            /* Logo Glow using Signal Red (#E8382A) */
-            className="w-35 h-20 mb-3 block drop-shadow-[0_0_15px_#E8382A]" 
-          />
-          {/* Heading: Worn White (#E8E0D5) */}
-          <h1 className="text-[#E8E0D5] text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-none mb-1">
-            Acidum
-          </h1>
-          {/* Label: Ash Grey (#9A8F85) */}
-          <p className="text-lg md:text-xl font-medium uppercase tracking-wider text-[#9A8F85]">
-            Dance Night Club
-          </p>
-        </header>
+      {/* Dark Overlay */}
+      <div 
+        className="absolute inset-0 z-0" 
+        style={{ backgroundColor: `${colors.ironBlack}99` }} // ~60% opacity for better text contrast
+      />
 
-        {/* 3. Main Title */}
-        <div className="mb-12 md:mb-16">
-          <h2 className="text-[#E8E0D5] text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight leading-tight mb-3">
-            DJ & Night Club
-          </h2>
-          {/* Highlight: Studio Red (#CC1E1E) */}
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-[#CC1E1E] leading-tight">
-            WordPress Theme
-          </h3>
-        </div>
+      {/* Content Container */}
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-center text-center">
 
-        {/* 4. Description Paragraph: Ash Grey (#9A8F85) */}
-        <p className="max-w-3xl text-lg md:text-xl font-light text-[#9A8F85] mb-16 md:mb-20 leading-relaxed px-4">
-          ACIDUM &mdash; is a modern WordPress theme created specially for night clubs, disco, party, music online stores, DJ, MC, club dancers and other.
-        </p>
+          {/* Main Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            style={{ color: colors.wornWhite }}
+            className="mb-6 text-5xl md:text-7xl mt-24 font-black tracking-tighter uppercase leading-[0.9]"
+          >
+           WHAT'S ON The Lineup <br /> Never Stops
+          </motion.h1>
 
-        {/* 5. Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 mb-24 md:mb-28">
-          {/* Primary CTA: Studio Red (#CC1E1E) | Hover: Signal Red (#E8382A) */}
-          <button className="px-10 py-4 bg-[#CC1E1E] text-[#E8E0D5] font-bold text-lg uppercase tracking-wider rounded-sm hover:bg-[#E8382A] hover:shadow-[0_0_20px_#CC1E1E] transition-all duration-300">
-            View demos
-          </button>
-          
-          {/* Secondary CTA: Rust Dark (#1C1210) | Border: Steel Silver (#A8A9AD) */}
-          <button className="px-10 py-4 bg-[#1C1210] text-[#E8E0D5] border border-[#A8A9AD] font-bold text-lg uppercase tracking-wider rounded-sm hover:bg-[#2A1E1A] transition-all duration-300">
-            Purchase
-          </button>
+          {/* Subheading / Description */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 1 }}
+            className="max-w-2xl"
+          >
+            <p 
+              style={{ color: colors.ashGrey }}
+              className="text-base md:text-lg lg:text-xl font-medium leading-relaxed"
+            >
+              Studio 35 brings you a packed schedule of club nights, special events, and headline acts all year round. Find your night, grab your tickets, and get ready.
+            </p>
+          </motion.div>
+
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
-export default Hero;
+export default NightclubHero;
