@@ -55,7 +55,7 @@ export default function Header() {
               <Link to="/night-club" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Club Night</Link>
               <Link to="/find-the-spot" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Find The Spot</Link>
               <Link to="/gallery" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Gallery</Link>
-              <Link to="/tickets" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Ticket</Link>
+              <Link to="/ticket" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Ticket</Link>
             </div>
           </div>
         )}
