@@ -6,37 +6,37 @@ const slides = [
     id: 1,
     title: "The Dancefloor",
     subtitle: "Lose yourself under neon lights and booming beats as the dancefloor comes alive with energy and excitement.",
-    image: "/ticket.png", // Ensure the extension matches your file
+    image: "/The dance floor.png", 
   },
   {
     id: 2,
     title: "The VIP Experience",
     subtitle: "Exclusive lounges, personalized service, and premium vibes designed for those who want the night their way.",
-    image: "https://cdn.prod.website-files.com/689c985fb38694a674ae4ede/68b880cdc2cfb3f353e24190_senior-person-dancing-having-fun-club.avif",
+    image: "/The Vip Experience.png",
   },
   {
     id: 3,
-    title: "The Performers",
+    title: "Live Bands",
     subtitle: "World-class DJs and live acts bring unmatched talent, creating nights that leave the crowd wanting more.",
-    image: "https://cdn.prod.website-files.com/689c985fb38694a674ae4ede/68b882539d384e7562393736_2148325472.avif",
+    image: "/The Live bands.png",
   },
   {
     id: 4,
     title: "The Drinks",
     subtitle: "Signature cocktails and handcrafted creations flow all night, adding flavor to the unforgettable Studio 35 vibe.",
-    image: "https://cdn.prod.website-files.com/689c985fb38694a674ae4ede/68c51493117bb751fdccc62e_18971.avif",
+    image: "/The drinks.png",
   },
   {
     id: 5,
     title: "The DJ Desk",
     subtitle: "Ever wanted to get behind the decks? Hire our professional DJ desk for your group is perfect for TikTok lives, content creation, and videos that'll have your followers wishing they were there. Book it for the night and make your moment the main event.",
-    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80"
+    image: "/The Dj Desk.png"
   },
     {
     id: 6,
     title: "The Pool Tables",
     subtitle: "Book a pool table and own your corner of the club. Whether it's a friendly game or a serious tournament among friends, our tables are ready when you are the all night long.",
-    image: "https://cdn.prod.website-files.com/689c985fb38694a674ae4ede/68b882539d384e7562393736_2148325472.avif",
+    image: "/The pool tables.png",
   },
 ];
 
