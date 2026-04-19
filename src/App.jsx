@@ -16,7 +16,6 @@ import GDPRConsent from "./components/GDPRButton";
 import About from "./page/About";
 import Nightclub from "./page/Nightclub";
 import Gallery from "./page/Gallery";
-import FindSpot from "./page/FindSpot";
 import WhatOn from "./page/Event";
 
 function App() {
@@ -39,7 +38,6 @@ function App() {
         <Route path="/our-story" element={<About />} />
         <Route path="/night-club" element={<Nightclub />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/find-the-spot" element={<FindSpot />} />
         <Route path="/tickets" element={<TicketPage />} />
         <Route path="/events-calendar" element={<WhatOn />} />
         <Route path="/single-event" element={<SingleEvent />} />

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -26,11 +27,10 @@ export default function Header() {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <Link to="/" className="hover:text-[#9A8F85] transition-colors uppercase">Home</Link>
+            <HashLink smooth to="/#" className="hover:text-[#9A8F85] transition-colors uppercase">Home</HashLink>
             <Link to="/events-calendar" className="hover:text-[#9A8F85] transition-colors uppercase">What’s On</Link>
             <Link to="/our-story" className="hover:text-[#9A8F85] transition-colors uppercase">Our Story</Link>
             <Link to="/night-club" className="hover:text-[#9A8F85] transition-colors uppercase">Club Night</Link>
-            <Link to="/find-the-spot" className="hover:text-[#9A8F85] transition-colors uppercase">Find The Spot</Link>
             <Link to="/gallery" className="hover:text-[#9A8F85] transition-colors uppercase">Gallery</Link>
             <Link to="/tickets" className="hover:text-[#9A8F85] transition-colors uppercase">Ticket</Link>
           </nav>
@@ -49,11 +49,10 @@ export default function Header() {
         {open && (
           <div className="md:hidden bg-[#0D0B0B] border-t border-[#2A1E1A] px-6 pb-8 animate-in slide-in-from-top duration-300">
             <div className="flex flex-col gap-5 text-sm font-medium pt-6">
-              <Link to="/" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Home</Link>
+              <HashLink smooth to="/#" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Home</HashLink>
               <Link to="/events-calendar" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">What’s On</Link>
               <Link to="/our-story" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Our Story</Link>
               <Link to="/night-club" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Club Night</Link>
-              <Link to="/find-the-spot" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Find The Spot</Link>
               <Link to="/gallery" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Gallery</Link>
               <Link to="/ticket" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Ticket</Link>
             </div>
