@@ -75,8 +75,8 @@ const DjSection = () => {
           </div>
 
           <DjCard
-            name="EMMA LEE"
-            country="BELGIUM"
+            name="NAME"
+            country="LOCATION"
             image="https://cdn.prod.website-files.com/636278d56e610029b4539c93/6365482595990d4206d9ddfb_emma-lee-dj-image-club-x-webflow-template.jpg"
           />
 
@@ -86,14 +86,14 @@ const DjSection = () => {
         <div className="flex flex-col gap-16 lg:pt-24">
 
           <DjCard
-            name="SCOTTS"
-            country="SPAIN"
+            name="NAME"
+            country="LOCATION"
             image="https://cdn.prod.website-files.com/636278d56e610029b4539c93/63654825efb845288d8e0c26_scotts-dj-image-club-x-webflow-template.jpg"
           />
 
           <DjCard
-            name="PIERRE CURIE"
-            country="FRANCE"
+            name="NAME"
+            country="LOCATION"
             image="https://cdn.prod.website-files.com/636278d56e610029b4539c93/63654825a449ade033185a87_pierre-curie-dj-image-club-x-webflow-template.jpg"
           />
 

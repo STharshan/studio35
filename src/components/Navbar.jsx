@@ -27,7 +27,7 @@ export default function Header() {
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
             <Link to="/" className="hover:text-[#9A8F85] transition-colors uppercase">Home</Link>
-            <Link to="/what’s-on" className="hover:text-[#9A8F85] transition-colors uppercase">What’s On</Link>
+            <Link to="/events-calendar" className="hover:text-[#9A8F85] transition-colors uppercase">What’s On</Link>
             <Link to="/our-story" className="hover:text-[#9A8F85] transition-colors uppercase">Our Story</Link>
             <Link to="/night-club" className="hover:text-[#9A8F85] transition-colors uppercase">Club Night</Link>
             <Link to="/find-the-spot" className="hover:text-[#9A8F85] transition-colors uppercase">Find The Spot</Link>
@@ -50,7 +50,7 @@ export default function Header() {
           <div className="md:hidden bg-[#0D0B0B] border-t border-[#2A1E1A] px-6 pb-8 animate-in slide-in-from-top duration-300">
             <div className="flex flex-col gap-5 text-sm font-medium pt-6">
               <Link to="/" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Home</Link>
-              <Link to="/what’s-on" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">What’s On</Link>
+              <Link to="/events-calendar" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">What’s On</Link>
               <Link to="/our-story" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Our Story</Link>
               <Link to="/night-club" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Club Night</Link>
               <Link to="/find-the-spot" onClick={closeMenu} className="hover:text-[#9A8F85] uppercase">Find The Spot</Link>

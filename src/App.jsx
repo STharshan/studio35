@@ -41,7 +41,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/find-the-spot" element={<FindSpot />} />
         <Route path="/tickets" element={<TicketPage />} />
-        <Route path="/what’s-on" element={<WhatOn />} />
+        <Route path="/events-calendar" element={<WhatOn />} />
         <Route path="/single-event" element={<SingleEvent />} />
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />

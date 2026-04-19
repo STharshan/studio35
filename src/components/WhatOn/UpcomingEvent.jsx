@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const events = [
   { id: 1, month: "Jan", day: "02", title: "Jazz Thursday", href: "#", image: "https://cdn.prod.website-files.com/65783e70779c933cb04336b5/657842a48c7edcefb026b5f7_pexels-alena-darmel-7715665.jpg" },
@@ -47,8 +48,8 @@ function EventCard({ event }) {
         </h3>
 
         <div style={{ overflow: "hidden", maxHeight: hovered ? "3rem" : "0", opacity: hovered ? 1 : 0, transition: "max-height 0.35s ease, opacity 0.35s ease" }}>
-          <a
-            href={event.href}
+          <Link
+            to="/single-event"
             style={{
               display: "inline-block", padding: "0.4rem 1.1rem", border: "1px solid #E8E0D5",
               color: "#E8E0D5", fontSize: "clamp(0.75rem, 1.3vw, 0.9rem)", letterSpacing: "0.12em",
@@ -59,7 +60,7 @@ function EventCard({ event }) {
             onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "#E8E0D5"; e.currentTarget.style.color = "#E8E0D5"; }}
           >
             Tickets
-          </a>
+          </Link>
         </div>
       </div>
     </div>

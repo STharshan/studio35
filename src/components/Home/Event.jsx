@@ -124,12 +124,12 @@ export default function UpcomingEvents() {
 
         {/* CTA Button */}
         <div className="mt-10">
-          <a
-            href="#"
+          <Link
+            to="/events-calendar"
             className="inline-flex items-center gap-2.5 bg-linear-to-r from-[#CC1E1E] to-[#E8382A] text-[#E8E0D5] px-7 py-3.5 rounded-full text-[15px] font-semibold no-underline transition-all duration-200 hover:scale-105 hover:shadow-[0_8px_32px_rgba(204,30,30,0.4)]"
           >
             Browse All Events
-          </a>
+          </Link>
         </div>
       </section>
     </div>
