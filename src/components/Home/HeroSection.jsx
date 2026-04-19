@@ -178,7 +178,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div id="/" className="relative w-full h-screen overflow-hidden">
       {/* Canvas */}
       <div ref={containerRef} className="absolute inset-0 w-full h-full">
         <canvas ref={canvasRef} className="w-full h-full block" />

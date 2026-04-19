@@ -4,6 +4,7 @@ import ServicesSection from '../components/Home/ServicesSection'
 import GallerySection from '../components/GallerySection'
 import UpcomingEvents from '../components/Home/Event'
 import ContactSection from '../components/ContactSection'
+import FindUs from '../components/FindSpot/Findus'
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <GallerySection />
       <UpcomingEvents />
       <ContactSection />
+      <FindUs />
     </div>
   )
 }

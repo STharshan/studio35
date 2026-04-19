@@ -1,5 +1,6 @@
 import { Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export default function Footer() {
   return (
@@ -38,7 +39,7 @@ export default function Footer() {
           <h3 className="text-[#E8E0D5] font-semibold mb-4">NIGHT CLUB</h3>
           <ul className="space-y-3 text-sm">
             <li>
-              <Link to="/" className="hover:text-[#E8E0D5] transition-colors">HOME</Link>
+              <HashLink smooth to="/#" className="hover:text-[#E8E0D5] transition-colors">HOME</HashLink>
             </li>
             <li>
               <Link to="/events-calendar" className="hover:text-[#E8E0D5] transition-colors">⁠What’s On</Link>
